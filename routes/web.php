@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/country', function () {
     return view('country');
 });
+
+Route::get('/category', function () {
+    return view('category');
+});
+
+Route::get('/tours', function () {
+    return view('tours');
+});
