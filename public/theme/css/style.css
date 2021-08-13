@@ -1302,7 +1302,7 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 .contact-main .contact-form { padding-top: 60px; padding-bottom: 60px; padding-left: 45px; max-width: 340px; }
 .contact-main .contact-form .field-submit { margin-top: 0; }
 
-.error-wrap { margin: 100px auto; text-align: center; max-width: 450px; }
+.error-wrap { margin: 100px auto; text-align: center;}
 .error-wrap h2 { font-size: 48px; font-weight: 500; margin-bottom: 15px; }
 .error-wrap b { font-family: "Jost"; font-size: 24px; font-weight: 500; display: block; color: #2d2d2d; margin-bottom: 15px; }
 .error-wrap a { color: #23d3d3; }
@@ -1600,7 +1600,7 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 .place-item.layout-02 .place-thumb .entry-category { position: absolute; top: 20px; left: 20px; }
 .place-item.layout-02 .place-thumb .entry-category img { width: 32px; height: auto; }
 .place-item.layout-02 .feature { position: absolute; left: 20px; bottom: 0; background-color: #ffcc01; border-radius: 5px; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); height: 28px; line-height: 28px; font-family: Jost; font-size: 15px; font-weight: 500; padding: 0 10px; color: #ffffff; transform: translateY(50%); }
-.place-item.layout-02 .entry-detail { background: #ffffff; border: solid 1px #eeeeee; border-top: 0; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; padding: 20px; }
+.place-item.layout-02 .entry-detail { background: #ffffff; border: solid 1px #eeeeee; border-top: 0; border-bottom-right-radius: 15px; border-bottom-left-radius: 15px; padding: 15px; }
 .place-item.layout-02 .entry-head { font-size: 16px; line-height: 1.5; display: -webkit-box; display: -ms-flexbox; display: flex; align-items: center; flex-wrap: wrap; margin-bottom: 5px; }
 .place-item.layout-02 .entry-head .place-city { position: relative; padding-left: 10px; margin-left: 8px; }
 .place-item.layout-02 .entry-head .place-city:before { content: ''; position: absolute; left: 0; bottom: 9px; width: 3px; height: 3px; background-color: #d8d8d8; }
