@@ -15,16 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/country', function () {
     return view('country');
-});
+})->name('country');
 
 Route::get('/category', function () {
     return view('category');
-});
+})->name('category');
 
 Route::get('/tours', function () {
     return view('tours');
-});
+})->name('tours');

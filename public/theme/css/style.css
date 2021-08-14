@@ -621,7 +621,7 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 
 .places-item { position: relative; overflow: hidden; margin-bottom: 30px; border-radius: 15px; -moz-border-radius: 15px; -webkit-border-radius: 15px; -ms-border-radius: 15px; -o-border-radius: 15px; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); }
 .places-item .places-item__thumb a { display: block; position: relative; }
-.places-item .places-item__thumb a:after { content: ''; position: absolute; left: 0; bottom: 0; right: 0; height: 120px; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6)); }
+.places-item .places-item__thumb a:after { content: ''; position: absolute; left: 0; bottom: 0; right: 0; height: 150px; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)); }
 .places-item .places-item__thumb img { width: 270px; height: 250px; object-fit: cover; }
 .places-item .places-item__info { position: absolute; left: 0; bottom: 0; right: 0; padding: 0 20px 20px; }
 .places-item .places-item__info a { color: #ffffff; }

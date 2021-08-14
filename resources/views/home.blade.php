@@ -32,81 +32,39 @@
 
         <div class="business-category">
             <div class="container">
-                <h2 class="title title-border-bottom align-center offset-item">Туристические услуги</h2>
+                <h2 class="title title-border-bottom align-center offset-item">Туристические категории</h2>
                 <div class="slick-sliders offset-item">
                     <div class="slick-slider explore-slider slider-pd30" data-item="4" data-arrows="true" data-itemScroll="1" data-dots="true" data-centerPadding="30" data-tabletitem="2" data-mobileitem="1" data-mobilearrows="false">
 
-                        <div class="slick-item">
-                            <div class="explore-item dark-sky-blue">
-                                <div class="explore-thumb">
-                                    <a href="#"><img src="{{ asset('theme/images/explore-01.jpeg') }}" alt=""></a>
-                                </div>
-                                <div class="explore-info">
-                                    <h3><a href="#">Гастро туры</a></h3>
-                                    <span>12 туров</span>
-                                </div>
-                            </div>
-                        </div>
+                        @php
+                          $categories = [
+                            ['name' => 'Гастро тур', 'image' => 'gastro.jpeg'],
+                            ['name' => 'Круизы', 'image' => 'cruise.jpeg'],
+                            ['name' => 'Гастро тур', 'image' => 'gastro.jpeg'],
+                            ['name' => 'Горнолыжные туры', 'image' => 'ski.jpeg'],
+                            ['name' => 'Индивидуальные туры', 'image' => 'spa.jpeg'],
+                            ['name' => 'Свадебные туры', 'image' => 'wedding.jpeg'],
+                            ['name' => 'Туры выходного дня', 'image' => 'bali.jpeg'],
+                            ['name' => 'Экотуры', 'image' => 'tundra.jpeg'],
+                            ['name' => 'Экстремальные туры', 'image' => 'surf.jpeg'],
+                          ];
+                        @endphp
 
+                        @foreach($categories as $category)
                         <div class="slick-item">
                             <div class="explore-item dark-sky-blue">
-                                <div class="explore-thumb">
-                                    <a href="#"><img src="{{ asset('theme/images/explore-02.jpeg') }}" alt=""></a>
-                                </div>
-                                <div class="explore-info">
-                                    <h3><a href="#">Круизы</a></h3>
-                                    <span>15 туров</span>
-                                </div>
+                                <a href="{{ route('category') }}">
+                                    <div class="explore-thumb">
+                                        <img src="{{ asset('theme/images/categories/' . $category['image']) }}" alt="">
+                                    </div>
+                                    <div class="explore-info">
+                                        <h3><a href="{{ route('category') }}">{{ $category['name'] }}</a></h3>
+                                        <span>{{ rand(1, 20) }} туров</span>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-
-                        <div class="slick-item">
-                            <div class="explore-item dark-sky-blue">
-                                <div class="explore-thumb">
-                                    <a href="#"><img src="{{ asset('theme/images/explore-03.jpeg') }}" alt=""></a>
-                                </div>
-                                <div class="explore-info">
-                                    <h3><a href="#">Горнолыжные туры</a></h3>
-                                    <span>29 туров</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slick-item">
-                            <div class="explore-item dark-sky-blue">
-                                <div class="explore-thumb">
-                                    <a href="#"><img src="{{ asset('theme/images/explore-04.jpeg') }}" alt=""></a>
-                                </div>
-                                <div class="explore-info">
-                                    <h3><a href="#">Свадебные туры</a></h3>
-                                    <span>16 туров</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slick-item">
-                            <div class="explore-item dark-sky-blue">
-                                <div class="explore-thumb">
-                                    <a href="#"><img src="{{ asset('theme/images/explore-05.jpeg') }}" alt=""></a>
-                                </div>
-                                <div class="explore-info">
-                                    <h3><a href="#">Экотуры</a></h3>
-                                    <span>6 туров</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="slick-item">
-                            <div class="explore-item dark-sky-blue">
-                                <div class="explore-thumb">
-                                    <a href="#"><img src="{{ asset('theme/images/explore-03.jpeg') }}" alt=""></a>
-                                </div>
-                                <div class="explore-info">
-                                    <h3><a href="#">Экстремальные туры</a></h3>
-                                    <span>16 places</span>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="place-slider__nav slick-nav">
                         <div class="place-slider__prev slick-nav__prev">
@@ -294,7 +252,7 @@
                         <div class="slick-item">
                             <div class="cities__item hover__box">
                                 <div class="cities__thumb hover__box__thumb">
-                                    <a title="London" href="#">
+                                    <a href="{{ route('country') }}">
                                         <img src="{{ asset('theme/images/city/' . $country['img']) }}" alt="{{ $country['name'] }}">
                                     </a>
                                 </div>
@@ -340,7 +298,7 @@
                     <div class="col-md-6">
                         <div class="asked-item">
                             <h3>Can I change plans anytime I want?</h3>
-                            <p>Golo plans work on a month-to-month basis. You can start/stop or make changes to your plan any time you want – however, we won’t give refunds for cancellation or plan downgrades.</p>
+                            <p>Golo plans work on a month-to-month basis. You can start/stop or make changes to your plan any time you want – however, we won't give refunds for cancellation or plan downgrades.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
