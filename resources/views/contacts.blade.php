@@ -46,27 +46,21 @@
                     </div>
                     <div class="col-md-6">
                         <div class="contact-form">
-                            <h2>Get in touch with us</h2>
                             <form action="#" method="POST" class="form-underline">
-                                <div class="field-inline">
-                                    <div class="field-input">
-                                        <input type="text" name="first_name" value="" placeholder="First Name">
-                                    </div>
-                                    <div class="field-input">
-                                        <input type="text" name="last_name" value="" placeholder="Last Name">
-                                    </div>
+                                <div class="field-input">
+                                    <input type="text" name="first_name" value="" placeholder="Ваше имя">
                                 </div>
                                 <div class="field-input">
-                                    <input type="email" name="email" value="" placeholder="Email">
+                                    <input type="email" name="email" value="" placeholder="Ваш Email">
                                 </div>
                                 <div class="field-input">
-                                    <input type="tel" name="tel" value="" placeholder="Phone Number">
+                                    <input type="tel" name="tel" value="" placeholder="Ваш номер телефона">
                                 </div>
                                 <div class="field-textarea">
-                                    <textarea name="message" placeholder="Message"></textarea>
+                                    <textarea name="message" placeholder="Сообщение"></textarea>
                                 </div>
                                 <div class="field-submit">
-                                    <input type="submit" value="Send Message" class="btn">
+                                    <input type="submit" value="Отправить сообщение" class="btn">
                                 </div>
                             </form>
                         </div>
