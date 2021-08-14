@@ -28,3 +28,7 @@ Route::get('/category', function () {
 Route::get('/tours', function () {
     return view('tours');
 })->name('tours');
+
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');

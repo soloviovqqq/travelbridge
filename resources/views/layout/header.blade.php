@@ -62,7 +62,7 @@
                                 <a href="#" title="Агентам">Агентам</a>
                             </li>
                             <li>
-                                <a href="#" title="Контакты">Контакты</a>
+                                <a href="{{ route('contacts') }}" title="Контакты">Контакты</a>
                             </li>
                         </ul>
                     </nav>

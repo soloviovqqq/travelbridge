@@ -1299,7 +1299,7 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 
 .contact-main .page-title { margin-bottom: 0px; }
 .contact-main .contact-text { padding: 60px 0; }
-.contact-main .contact-form { padding-top: 60px; padding-bottom: 60px; padding-left: 45px; max-width: 340px; }
+.contact-main .contact-form { padding-top: 60px; padding-bottom: 60px; padding-left: 45px; max-width: 450px; }
 .contact-main .contact-form .field-submit { margin-top: 0; }
 
 .error-wrap { margin: 100px auto; text-align: center;}
