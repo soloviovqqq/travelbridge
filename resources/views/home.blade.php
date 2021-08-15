@@ -10,23 +10,23 @@
                 <div class="site-banner__content">
                     <h1 class="site-banner__title">Бронируйте туры онлайн</h1>
                     <p><i>20</i> стран, <i>10</i> категорий, <i>15466</i> клиентов.</p>
-                    <form action="#" class="site-banner__search layout-02">
-                        <div class="field-input">
-                            <label for="loca">Куда</label>
-                            <input class="site-banner__search__input open-suggestion" id="loca" type="text" name="where" placeholder="введите страну" autocomplete="off">
-                            <div class="search-suggestions location-suggestions">
-                                <ul>
-                                    <li><a href="#"><i class="las la-sun"></i><span>Египет</span></a></li>
-                                    <li><a href="#"><i class="las la-sun"></i><span>Турция</span></a></li>
-                                    <li><a href="#"><i class="las la-snowboarding"></i><span>Австрия</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="field-submit">
-                            <button><i class="las la-search la-24-black"></i></button>
-                        </div>
-                    </form>
-                </div>
+{{--                    <form action="#" class="site-banner__search layout-02">--}}
+{{--                        <div class="field-input">--}}
+{{--                            <label for="loca">Куда</label>--}}
+{{--                            <input class="site-banner__search__input open-suggestion" id="loca" type="text" name="where" placeholder="введите страну" autocomplete="off">--}}
+{{--                            <div class="search-suggestions location-suggestions">--}}
+{{--                                <ul>--}}
+{{--                                    <li><a href="#"><i class="las la-sun"></i><span>Египет</span></a></li>--}}
+{{--                                    <li><a href="#"><i class="las la-sun"></i><span>Турция</span></a></li>--}}
+{{--                                    <li><a href="#"><i class="las la-snowboarding"></i><span>Австрия</span></a></li>--}}
+{{--                                </ul>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="field-submit">--}}
+{{--                            <button><i class="las la-search la-24-black"></i></button>--}}
+{{--                        </div>--}}
+{{--                    </form>--}}
+{{--                </div>--}}
             </div>
         </div>
 
@@ -90,7 +90,7 @@
                             <div class="place-inner">
                                 <div class="place-thumb hover-img">
                                     <a class="entry-thumb" href="#">
-                                        <img src="{{ asset('theme/images/listing/09.jpg') }}" alt=""/>
+                                        <img src="{{ asset('theme/images/categories/gastro.jpeg') }}" alt=""/>
                                     </a>
                                     <a class="entry-category blue" href="#">
                                         <i class="las la-utensils"></i><span>Гастро тур</span>
@@ -124,7 +124,7 @@
                             <div class="place-inner">
                                 <div class="place-thumb hover-img">
                                     <a class="entry-thumb" href="#">
-                                        <img src="{{ asset('theme/images/listing/08.jpg') }}" alt=""/>
+                                        <img src="{{ asset('theme/images/categories/bali.jpeg') }}" alt=""/>
                                     </a>
                                     <a class="entry-category rosy-pink" href="#">
                                         <i class="las la-sun"></i><span>Пляжный тур</span>
@@ -158,7 +158,7 @@
                                 <div class="place-inner">
                                     <div class="place-thumb hover-img">
                                         <a class="entry-thumb" href="#">
-                                            <img src="{{ asset('theme/images/listing/03.jpg') }}" alt=""/>
+                                            <img src="{{ asset('theme/images/categories/spa.jpeg') }}" alt=""/>
                                         </a>
                                         <a class="entry-category purple" href="#">
                                             <i class="las la-spa"></i><span>Релакс тур</span>
