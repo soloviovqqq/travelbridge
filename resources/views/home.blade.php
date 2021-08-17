@@ -89,10 +89,10 @@
                         <div class="place-item layout-02 place-hover">
                             <div class="place-inner">
                                 <div class="place-thumb hover-img">
-                                    <a class="entry-thumb" href="#">
+                                    <a class="entry-thumb" href="{{ route('tour') }}">
                                         <img src="{{ asset('theme/images/categories/gastro.jpeg') }}" alt=""/>
                                     </a>
-                                    <a class="entry-category blue" href="#">
+                                    <a class="entry-category blue" href="{{ route('category') }}">
                                         <i class="las la-utensils"></i><span>Гастро тур</span>
                                     </a>
                                 </div>
@@ -106,7 +106,7 @@
                                             Рим
                                         </div>
                                     </div>
-                                    <h3 class="place-title"><a href="#">Гастро тур "Мамамия"</a></h3>
+                                    <h3 class="place-title"><a href="{{ route('tour') }}">Гастро тур "Мамамия"</a></h3>
                                     <small class="mb-3" style="display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;">Помимо десятков видов паст, пицц и лазаний, в кухне Риме Вас ждут телячьи эскалопы с ветчиной сальтимбокка — в переводе: прыгай в рот, восхитительная  жареная  ягнятина с розмарином и тимьяном аббакьоалла романа. На гарнир традиционно подают рис, горох, спаржу и артишоки.</small>
                                     <div class="entry-bottom">
                                         <div class="place-preview">
@@ -123,10 +123,10 @@
                         <div class="place-item layout-02 place-hover">
                             <div class="place-inner">
                                 <div class="place-thumb hover-img">
-                                    <a class="entry-thumb" href="#">
+                                    <a class="entry-thumb" href="{{ route('tour') }}">
                                         <img src="{{ asset('theme/images/categories/bali.jpeg') }}" alt=""/>
                                     </a>
-                                    <a class="entry-category rosy-pink" href="#">
+                                    <a class="entry-category rosy-pink" href="{{ route('category') }}">
                                         <i class="las la-sun"></i><span>Пляжный тур</span>
                                     </a>
                                 </div>
@@ -140,7 +140,7 @@
                                             Одесса
                                         </div>
                                     </div>
-                                    <h3 class="place-title"><a href="#">Пляжный тур "Ибица"</a></h3>
+                                    <h3 class="place-title"><a href="{{ route('tour') }}">Пляжный тур "Ибица"</a></h3>
                                     <small class="mb-3" style="display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;">Ибица – самый модный курорт Европы. Солнце, море, свобода, круглосуточное веселье, переходящее в «отрыв».</small>
                                     <div class="entry-bottom">
                                         <div class="place-preview">
@@ -157,10 +157,10 @@
                         <div class="place-item layout-02 place-hover">
                                 <div class="place-inner">
                                     <div class="place-thumb hover-img">
-                                        <a class="entry-thumb" href="#">
+                                        <a class="entry-thumb" href="{{ route('tour') }}">
                                             <img src="{{ asset('theme/images/categories/spa.jpeg') }}" alt=""/>
                                         </a>
-                                        <a class="entry-category purple" href="#">
+                                        <a class="entry-category purple" href="{{ route('category') }}">
                                             <i class="las la-spa"></i><span>Релакс тур</span>
                                         </a>
                                     </div>
@@ -174,7 +174,7 @@
                                                 Мармарис
                                             </div>
                                         </div>
-                                        <h3 class="place-title"><a href="#">Релакс тур "Насолода"</a></h3>
+                                        <h3 class="place-title"><a href="{{ route('tour') }}">Релакс тур "Насолода"</a></h3>
                                         <small class="mb-3" style="display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;">Позвольте себе забыть о ежедневной рутине и окунуться в атмосферу релакса. Незабываемый отдых в загородном комплексе в сосновом лесу с оздоровительными SPA-программами.</small>
                                         <div class="entry-bottom">
                                             <div class="place-preview">
