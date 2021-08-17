@@ -13,19 +13,23 @@
         <div class="place">
             <div class="slick-sliders">
                 <div class="slick-slider" data-item="1" data-itemScroll="1" data-dots="false" data-infinite="false" data-centerMode="false" data-centerPadding="0">
-                    <div class="place-slider__item"><a class="venobox" href="theme/images/listing/large-01.jpg" data-gall="pls_slider"><img src="theme/images/listing/large-01.jpg" alt="slider-01"></a></div>
-                    <div class="place-slider__item"><a class="venobox" href="theme/images/listing/gallery-01.jpg" data-gall="pls_slider"><img src="theme/images/listing/gallery-01.jpg" alt="slider-01"></a></div>
-                    <div class="place-slider__item"><a class="venobox" href="theme/images/listing/gallery-02.jpg" data-gall="pls_slider"><img src="theme/images/listing/gallery-02.jpg" alt="slider-02"></a></div>
+                    @for($i = 1; $i <= 5;$i++)
+                        <div class="place-slider__item">
+                            <a class="venobox" href="{{ asset("theme/images/hotels/Martinez_hotel$i.jpeg") }}" data-gall="pls_slider">
+                                <img src="{{ asset("theme/images/hotels/Martinez_hotel$i.jpeg") }}" alt="slider-01">
+                            </a>
+                        </div>
+                    @endfor
                 </div>
 
                 <div class="place-gallery">
                     <a title="Gallery" href="#" class="show-gallery">
                         <i class="la la-image"></i>
-                        Gallery
+                        Галерея
                     </a>
-                    <a title="Video" href="https://www.youtube.com/watch?v=JN3_cyOVnA0" class="venobox" data-autoplay="true" data-vbtype="video">
+                    <a title="Video" href="https://youtu.be/7a3HnTH41pc" class="venobox" data-autoplay="true" data-vbtype="video">
                         <i class="la la-play-circle"></i>
-                        Video
+                        Видео
                     </a>
                 </div>
 
@@ -48,10 +52,9 @@
                                 <div class="place__meta">
                                     <div class="place__reviews reviews">
                                         <span class="place__reviews__number reviews__number">
-												9.9
-												<i class="la la-star"></i>
-											</span>
-                                        <span class="place__places-item__count reviews_count">(3 reviews)</span>
+                                            9.9
+                                            <i class="la la-star"></i>
+                                        </span>
                                     </div>
                                     <div class="place__currency">$$$$</div>
                                     <div class="place__category">
@@ -128,13 +131,19 @@
                                 </div>
                             </div>
                             <div class="place__box place__box-overview">
-                                <h3>Overview</h3>
-                                <div class="place__desc">The Grade I-listed British Library is the largest national library in the world with over 150 million catalogued items held inside, some dating back as far as 2000 BC. It’s home to 15th-century editions of Chaucer’s Canterbury Tales, original song sheets penned by the Beatles and the memorandum written by Lord Nelson two days before the Battle of Trafalgar. It also receives a copy of every single book published in the UK and Ireland. The Grade I-listed British Library is the largest national library in the world with over 150 million catalogued items held inside, some dating back as far as 2000 BC. It’s home to 15th-century editions of Chaucer’s Canterbury Tales, original song sheets penned by the Beatles and the memorandum written by Lord Nelson two days before the Battle of Trafalgar. It also receives a copy of every single book published in the UK and Ireland.</div><!-- .place__desc -->
+                                <h3>Описание</h3>
+                                <div class="place__desc">
+                                    <p>Пятизвездочный отель Martinez - in the Unbound Collection by Hyatt с платным частным пляжем расположен на знаменитом бульваре Круазет в городе Канны. При отеле работает несколько ресторанов и бар Martinez.</p>
+
+                                    <p>Номера отеля Martinez - in the Unbound Collection by Hyatt с современным дизайном интерьера в стиле ар-деко полностью отремонтированы в мае 2018 года. Номера с гостиной зоной и ванной комнатой, отделанной мрамором, оснащены кондиционером. В некоторых номерах есть собственная терраса с видом на Средиземное море.</p>
+
+                                    <p>В ресторане Le Jardin du Martinez, открытом в мае 2018 года, трапезу подают на террасе в тени кипарисов и пальмовых деревьев. В хорошую погоду в саду ресторана проводятся вечеринки в стиле 1930-х годов. В ресторане изысканной кухни La Palme d'Or, удостоенном 2 звезд Мишлен, предлагают блюда по меню, навеянному шедеврами кинематографа. Из обеденного зала открывается вид на бульвар Круазет. Также к услугам гостей ресторан La Plage du Martinez на пляже, где предлагают блюда средиземноморской кухни из местных продуктов и свежих морепродуктов. В баре Martinez, отражающем богатую историю отеля Martinez, подают джин-тоник и разнообразные коктейли, а по вечерам проводят живое кулинарное шоу с приготовлением блюд тепаньяки.</p>
+                                </div>
                                 <a href="#" class="show-more" title="Show More">Show more</a>
                             </div>
 
                             <div class="place__box">
-                                <h3>Contact Info</h3>
+                                <h3>Контактная информация</h3>
                                 <ul class="place__contact">
                                     <li>
                                         <i class="la la-phone"></i>
@@ -156,19 +165,19 @@
                             </div>
 
                             <div class="place__box">
-                                <h3>FAQ's</h3>
+                                <h3>Часто задаваемые вопросы</h3>
                                 <ul class="faqs-accordion">
                                     <li>
-                                        <h4>What are the ingredients or taste profile for the signature sauce?</h4>
-                                        <div class="desc"><p>We are currently offering free shipping throughout Northern California on all orders over $80. Peninsula to San Francisco can receive next day delivery.</p></div>
+                                        <h4>Когда лучше всего посетить ваш объект для идеального пляжного отдыха?</h4>
+                                        <div class="desc"><p>Уважаемый клиент, мы благодарим вас за вашу электронную почту, примите к сведению, что лучшее время для посещения нашей прекрасной собственности - это летнее время, с июня по сентябрь. Мы остаемся в Вашем распоряжении для получения любой информации и с нетерпением ждем возможности приветствовать Вас. С наилучшими пожеланиями.</p></div>
                                     </li>
                                     <li>
-                                        <h4>How far does free delivery extend to? To San Francisco?</h4>
-                                        <div class="desc"><p>We are currently offering free shipping throughout Northern California on all orders over $80. Peninsula to San Francisco can receive next day delivery.</p></div>
+                                        <h4>А у вас есть бесплатная парковка?</h4>
+                                        <div class="desc"><p>Парковка стоит 48 € в день</p></div>
                                     </li>
                                     <li>
-                                        <h4>How far does free delivery extend to? To San Francisco?</h4>
-                                        <div class="desc"><p>We are currently offering free shipping throughout Northern California on all orders over $80. Peninsula to San Francisco can receive next day delivery.</p></div>
+                                        <h4>Добрый день. Какая линия от моря?</h4>
+                                        <div class="desc"><p>Фешенебельный отель на 1-й линии у моря.</p></div>
                                     </li>
                                 </ul>
                             </div>
