@@ -36,6 +36,8 @@
     <script src="{{ asset('theme/libs/datetimepicker/jquery.datetimepicker.full.min.js') }}"></script>
     <script src="{{ asset('theme/libs/venobox/venobox.min.js') }}"></script>
     <script src="{{ asset('theme/libs/waypoints/jquery.waypoints.min.js') }}"></script>
+    @stack('scripts')
+
     <!-- orther script -->
     <script src="{{ asset('theme/js/main.js') }}"></script>
 </head>
