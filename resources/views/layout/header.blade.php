@@ -59,7 +59,7 @@
                                 <a href="{{ route('tours') }}" title="Рекламные туры">Рекламные туры</a>
                             </li>
                             <li>
-                                <a href="#" title="Агентам">Агентам</a>
+                                <a href="{{ route('agentam') }}" title="Агентам">Агентам</a>
                             </li>
                             <li>
                                 <a href="{{ route('contacts') }}" title="Контакты">Контакты</a>

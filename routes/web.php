@@ -37,6 +37,10 @@ Route::get('/tour', function () {
     return view('tour');
 })->name('tour');
 
+Route::get('/agentam', function () {
+    return view('agentam');
+})->name('agentam');
+
 Route::get('/hotel', function () {
     return view('hotel');
 })->name('hotel');
