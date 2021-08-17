@@ -1163,7 +1163,7 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 .single .place__meta > div:after { content: ''; width: 4px; height: 4px; background-color: #ffffff; opacity: 0.6; display: inline-block; border-radius: 50%; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); right: -14px; top: 50%; transform: translateY(-50%); position: absolute; }
 .single .place__meta > div:last-child:after { content: ''; display: none; }
 
-.single-01 .place__left { margin-top: -125px; padding-right: 30px; }
+.single-01 .place__left { margin-top: -90px; padding-right: 30px; }
 
 .single-02 .place__left { padding-right: 30px; }
 .single-02 .breadcrumbs a { color: #8d8d8d; font-size: 14px; font-family: "Jost-Book"; font-weight: normal; }

@@ -75,12 +75,12 @@
                         <div class="place-item">
                             <div class="places-item hover__box">
                                 <div class="places-item__thumb hover__box__thumb">
-                                    <a title="barca" href="#">
+                                    <a title="barca" href="{{ route('hotel') }}">
                                         <img src="{{ asset("theme/images/hotels/" . $hotel['image']) }}" alt="">
                                     </a>
                                 </div>
                                 <div class="places-item__info">
-                                    <h3><a href="#">{{ $hotel['name'] }}</a></h3>
+                                    <h3><a href="{{ route('hotel') }}">{{ $hotel['name'] }}</a></h3>
                                     <div class="places-item__meta">
                                         <div class="places-item__reviews">
                                             <span class="places-item__number">

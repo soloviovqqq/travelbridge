@@ -36,3 +36,7 @@ Route::get('/contacts', function () {
 Route::get('/tour', function () {
     return view('tour');
 })->name('tour');
+
+Route::get('/hotel', function () {
+    return view('hotel');
+})->name('hotel');
