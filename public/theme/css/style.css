@@ -189,6 +189,7 @@ textarea:focus { border-color: #23d3d3; outline: none; }
 .main-menu li:hover > .sub-menu { opacity: 1; visibility: visible; margin-top: 0; -webkit-transition: all 0.5s ease 0s; -moz-transition: all 0.5s ease 0s; -o-transition: all 0.5s ease 0s; transition: all 0.5s ease 0s; }
 
 .home-header .main-menu li a { color: #fff; }
+.home-header .main-menu li a:hover { color: #23d3d3; }
 
 
 .btn { border-radius: 20px; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); background-color: #23d3d3; height: 40px; line-height: 40px; font-weight: 500; padding: 0 25px; color: #ffffff; outline: 0; outline-offset: 0; }

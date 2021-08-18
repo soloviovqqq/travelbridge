@@ -2,7 +2,7 @@
 
 @section('content')
     <main id="main" class="site-main">
-        <div class="page-title" style="background-image: url({{ asset('theme/images/city/san-fransico-small.jpeg') }});">
+        <div class="page-title" style="background-image: url({{ asset('theme/images/bg/tours.jpg') }});">
             <div class="container">
                 <div class="page-title__content">
                     <h1 class="page-title__name">Рекламные туры</h1>
