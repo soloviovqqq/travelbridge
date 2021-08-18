@@ -3,7 +3,7 @@
     @include('layout.head')
 <body>
 <div id="wrapper">
-    @include('layout.header')
+    @include('layout.header', ['transparentHeader' => $transparentHeader ?? false])
 
     @yield('content')
 

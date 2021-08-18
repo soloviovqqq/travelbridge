@@ -1,4 +1,4 @@
-<header id="header" class="site-header @yield('header-classes')">
+<header id="header" class="site-header @if($transparentHeader) home-header @endif">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-5 col-5">
@@ -40,7 +40,11 @@
                     </div>
                     <div class="site__brand">
                         <a title="Logo" href="/" class="site__brand__logo">
-                            <img src="{{ asset('theme/images/assets/logo.png') }}" alt="">
+                            @if($transparentHeader)
+                                <img src="{{ asset('theme/images/assets/logo.png') }}" class="">
+                            @else
+                                <img src="{{ asset('theme/images/assets/logo_blue.png') }}" class="">
+                            @endif
                         </a>
                     </div>
                 </div>

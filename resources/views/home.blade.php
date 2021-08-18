@@ -1,6 +1,4 @@
-@extends('layout.main')
-
-@section('header-classes', 'home-header')
+@extends('layout.main', ['transparentHeader' => $transparentHeader ?? false])
 
 @section('content')
     <main id="main" class="site-main home-main business-main overflow">
