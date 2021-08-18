@@ -14,31 +14,25 @@
             <div class="container">
                 <div class="intro__content">
                     <div class="row">
-                        <div class="col-lg-6">
-                            <div class="intro__text">Рекламные туры от Travel Bridge – это отличная возможность повысить профессиональную компетенцию. Наши информационные туры смело можно назвать образовательным мероприятием для менеджеров турагенций.</div>
+                        <div class="col-lg-7">
+                            <div>Рекламные туры от Travel Bridge – это отличная возможность повысить профессиональную компетенцию. Наши информационные туры смело можно назвать образовательным мероприятием для менеджеров турагенций.</div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-5">
                             <div class="intro__meta">
                                 <div class="row">
-                                    <div class="col-md-6 col-sm-6">
+                                    <div class="col-md-12 col-sm-12">
                                         <div class="intro__meta__item">
-                                            <h3>??</h3>
+                                            <h3>Горящие туры</h3>
                                             <p>
-                                                <i class="la la-money-bill"></i>
-                                                <span>??</span>
+                                                <i class="la la-percent"></i>
+                                                <a href="{{ route('tour') }}">Гастро тур "Мамамия" (19.08.2021 - 20.09.2021)</a>
+                                            </p>
+                                            <p>
+                                                <i class="la la-percent"></i>
+                                                <a href="{{ route('tour') }}">Пляжный тур "Ибица" (19.08.2021 - 20.09.2021)</a>
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="intro__meta__item">
-                                            <h3>Направления</h3>
-                                            <p>
-                                                <i class="la la-globe"></i>
-                                                <span>Кения, Грузия</span>
-                                            </p>
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
                         </div>
