@@ -183,7 +183,7 @@
 
                     <div class="col-lg-4">
                         <div class="sidebar sidebar-shadow sidebar-sticky">
-                            <aside class=" widget-sb-detail">
+                            <aside class="widget-sb-detail">
                                 <div class="business-info">
                                     <h3 class="text-center mb-4">Краткая информация</h3>
                                     <ul>
