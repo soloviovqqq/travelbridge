@@ -6,31 +6,15 @@
             <video class="overlay-video" autoplay="" muted="" playsinline="" loop="" src="{{ asset('theme/videos/movie.mp4') }}"></video>
             <div class="container">
                 <div class="site-banner__content">
-                    <h1 class="site-banner__title">Бронируйте туры онлайн</h1>
-                    <p><i>20</i> стран, <i>10</i> категорий, <i>15466</i> клиентов.</p>
-{{--                    <form action="#" class="site-banner__search layout-02">
-                        <div class="field-input">
-                            <label for="loca">Куда</label>
-                            <input class="site-banner__search__input open-suggestion" id="loca" type="text" name="where" placeholder="введите страну" autocomplete="off">
-                            <div class="search-suggestions location-suggestions">
-                                <ul>
-                                    <li><a href="#"><i class="las la-sun"></i><span>Египет</span></a></li>
-                                    <li><a href="#"><i class="las la-sun"></i><span>Турция</span></a></li>
-                                    <li><a href="#"><i class="las la-snowboarding"></i><span>Австрия</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="field-submit">
-                            <button><i class="las la-search la-24-black"></i></button>
-                        </div>
-                    </form>--}}
+                    <h1 class="site-banner__title"> Travel Bridge ваш проводник в мир путешествий</h1>
+                    <p><i>20</i> стран, <i>15466</i> клиентов.</p>
                 </div>
             </div>
         </div>
 
         <div class="business-category">
             <div class="container">
-                <h2 class="title title-border-bottom align-center offset-item">Туристические категории</h2>
+                <h2 class="title title-border-bottom align-center offset-item">Типы туров</h2>
                 <div class="slick-sliders offset-item">
                     <div class="slick-slider explore-slider slider-pd30" data-item="4" data-arrows="true" data-itemScroll="1" data-dots="true" data-centerPadding="30" data-tabletitem="2" data-mobileitem="1" data-mobilearrows="false">
 
@@ -78,7 +62,7 @@
 
         <div class="trending trending-business">
             <div class="container">
-                <h2 class="title title-border-bottom align-center offset-item">Новые туры</h2>
+                <h2 class="title title-border-bottom align-center offset-item">Наши новинки</h2>
                 <div class="slick-sliders offset-item">
                     <div class="slick-slider trending-slider slider-pd30" data-item="4" data-arrows="true" data-itemScroll="4" data-dots="true" data-centerPadding="30" data-tabletitem="2" data-tabletscroll="2" data-smallpcscroll="3" data-smallpcitem="3" data-mobileitem="1" data-mobilescroll="1" data-mobilearrows="false">
 
@@ -310,7 +294,7 @@
 
         <div class="testimonial">
             <div class="container">
-                <h2 class="title title-border-bottom align-center offset-item">Наши отзывы</h2>
+                <h2 class="title title-border-bottom align-center offset-item">Отзывы о нас</h2>
                 <div class="slick-sliders offset-item">
                     <div class="slick-slider testimonial-slider layout-02 slider-pd30" data-item="2" data-arrows="true" data-itemScroll="2" data-dots="true" data-centerPadding="30" data-tabletitem="1" data-tabletscroll="1" data-mobileitem="1" data-mobilescroll="1" data-mobilearrows="false">
                         <div class="testimonial-item">

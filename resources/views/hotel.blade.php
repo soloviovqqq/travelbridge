@@ -236,7 +236,7 @@
 
         <div class="similar-places">
             <div class="container">
-                <h2 class="similar-places__title title">Похожие отели</h2>
+                <h2 class="similar-places__title title">Рекомендуемые отели</h2>
                 <div class="similar-places__content">
                     <div class="row">
                         @foreach($hotels as $hotel)
