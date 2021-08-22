@@ -46,3 +46,7 @@ Route::get('/agentam', function () {
 Route::get('/hotel', function () {
     return view('hotel');
 })->name('hotel');
+
+Route::get('/tours-group', function () {
+    return view('tours-group');
+})->name('tours-group');
