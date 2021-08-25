@@ -1780,7 +1780,7 @@
 	}
 	.single-01 .place__left{
 		padding-right: 0;
-		margin-top: -140px;
+		margin-top: -90px;
 	}
 	.page-content.isotope .post-grid.columns-3 .post,
 	.area-places.layout-3col .place-item,
@@ -2060,4 +2060,8 @@
 	.blogs-wrap.layout-02{
 		padding: 40px 0;
 	}
+    .single-01 .place__left{
+        padding-right: 0;
+        margin-top: -140px;
+    }
 }

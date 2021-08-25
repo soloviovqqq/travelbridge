@@ -296,7 +296,7 @@
                 <div class="slick-sliders offset-item">
                     <div class="slick-slider testimonial-slider layout-02 slider-pd30" data-item="2" data-arrows="true" data-itemScroll="2" data-dots="true" data-centerPadding="30" data-tabletitem="1" data-tabletscroll="1" data-mobileitem="1" data-mobilescroll="1" data-mobilearrows="false">
                         <div class="testimonial-item">
-                            <div class="avatar">
+                            <div class="avatar d-none d-xl-block d-lg-block">
                                 <img src="{{ asset('theme/images/avatars/male-2.jpg') }}" alt="Avatar">
                                 <img src="{{ asset('theme/images/assets/quote-active.png') }}" alt="Quote" class="quote">
                             </div>
@@ -308,7 +308,7 @@
                             </div>
                         </div>
                         <div class="testimonial-item">
-                            <div class="avatar">
+                            <div class="avatar d-none d-xl-block d-lg-block">
                                 <img src="{{ asset('theme/images/avatars/female-1.jpg') }}" alt="Avatar">
                                 <img src="{{ asset('theme/images/assets/quote-active.png') }}" alt="Quote" class="quote">
                             </div>
@@ -320,7 +320,7 @@
                             </div>
                         </div>
                         <div class="testimonial-item">
-                            <div class="avatar">
+                            <div class="avatar d-none d-xl-block d-lg-block">
                                 <img src="{{ asset('theme/images/avatars/female-3.jpg') }}" alt="Avatar">
                                 <img src="{{ asset('theme/images/assets/quote-active.png') }}" alt="Quote" class="quote">
                             </div>
