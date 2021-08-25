@@ -16,22 +16,19 @@
                                 <div class="popup__menu popup__box">
                                     <ul>
                                         <li>
-                                            <a href="#" title="Главная">Главная</a>
+                                            <a href="{{ route('home') }}" title="Главная">Главная</a>
                                         </li>
                                         <li>
-                                            <a href="#" title="Операторские туры">Операторские туры</a>
+                                            <a href="{{ route('tours') }}" title="Операторские туры">Операторские туры</a>
                                         </li>
                                         <li>
-                                            <a href="#" title="Рекламные туры">Рекламные туры</a>
+                                            <a href="{{ route('tours') }}" title="Рекламные туры">Рекламные туры</a>
                                         </li>
                                         <li>
-                                            <a href="#" title="Агентам">Агентам</a>
+                                            <a href="{{ route('agentam') }}" title="Агентам">Агентам</a>
                                         </li>
                                         <li>
-                                            <a href="#" title="Туристические услуги">Туристические услуги</a>
-                                        </li>
-                                        <li>
-                                            <a href="#" title="Контакты">Контакты</a>
+                                            <a href="{{ route('contacts') }}" title="Контакты">Контакты</a>
                                         </li>
                                     </ul>
                                 </div>
