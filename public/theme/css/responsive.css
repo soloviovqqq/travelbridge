@@ -1833,10 +1833,6 @@
 		content: '';
 		display: none;
 	}
-	.site-banner .site-banner__content{
-		position: static;
-		transform: inherit;
-	}
 	.banner-contact .banner-inner{
 		flex-wrap: wrap;
 	}

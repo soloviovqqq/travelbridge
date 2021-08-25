@@ -1,9 +1,18 @@
 <header id="header" class="site-header @if($transparentHeader) home-header @endif">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-5 col-5">
-                <div class="site">
-                    <div class="site__menu">
+            <div class="col-xl-3 col-lg-3 col-12">
+                <div class="site d-flex justify-content-between">
+                    <div class="site__brand">
+                        <a title="Logo" href="/" class="site__brand__logo">
+                            @if($transparentHeader)
+                                <img src="{{ asset('theme/images/assets/logo.png') }}" class="">
+                            @else
+                                <img src="{{ asset('theme/images/assets/logo_blue.png') }}" class="">
+                            @endif
+                        </a>
+                    </div>
+                    <div class="site__menu d-flex align-items-center">
                         <a title="Menu Icon" href="#" class="site__menu__icon">
                             <i class="las la-bars la-24-black"></i>
                         </a>
@@ -35,18 +44,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="site__brand">
-                        <a title="Logo" href="/" class="site__brand__logo">
-                            @if($transparentHeader)
-                                <img src="{{ asset('theme/images/assets/logo.png') }}" class="">
-                            @else
-                                <img src="{{ asset('theme/images/assets/logo_blue.png') }}" class="">
-                            @endif
-                        </a>
-                    </div>
                 </div>
             </div>
-            <div class="col-xl-7 col-7">
+            <div class="col-xl-9 col-lg-9 col-12">
                 <div class="right-header align-right">
                     <nav class="main-menu">
                         <ul>

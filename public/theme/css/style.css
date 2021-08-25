@@ -246,7 +246,7 @@ textarea:focus { border-color: #23d3d3; outline: none; }
 
 .site__menu { line-height: 40px; display: inline-block; vertical-align: middle; }
 .site__menu > a { line-height: 0; display: block; margin-right: 23px; }
-.site__menu > a i { font-size: 20px; }
+.site__menu > a i { font-size: 26px; }
 
 a.site__menu__icon { display: none; }
 
@@ -2475,5 +2475,8 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover { background: none !important; color: #23d3d3 !important; }
 
 .xdsoft_inline { position: absolute; top: 100%; left: 0; right: 0; position: absolute; }
+
+.site__menu__icon {margin: 0;}
+.home-header .site__menu__icon {color: white;}
 
 /*# sourceMappingURL=style.css.map */
