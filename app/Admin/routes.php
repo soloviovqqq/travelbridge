@@ -15,4 +15,5 @@ Route::group([
     $router->get('/', 'HomeController@index');
     $router->resource('tour-types', 'TourTypeController');
     $router->resource('countries', 'CountryController');
+    $router->resource('reviews', 'ReviewController');
 });

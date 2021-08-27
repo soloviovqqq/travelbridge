@@ -241,42 +241,20 @@
                 <h2 class="title title-border-bottom align-center offset-item">Отзывы о нас</h2>
                 <div class="slick-sliders offset-item">
                     <div class="slick-slider testimonial-slider layout-02 slider-pd30" data-item="2" data-arrows="true" data-itemScroll="2" data-dots="true" data-centerPadding="30" data-tabletitem="1" data-tabletscroll="1" data-mobileitem="1" data-mobilescroll="1" data-mobilearrows="false">
-                        <div class="testimonial-item">
-                            <div class="avatar d-none d-xl-block d-lg-block">
-                                <img src="{{ asset('theme/images/avatars/male-2.jpg') }}" alt="Avatar">
-                                <img src="{{ asset('theme/images/assets/quote-active.png') }}" alt="Quote" class="quote">
-                            </div>
-                            <div class="testimonial-info">
-                                <p>Море впечатлений! Супер эмоции! Я не ожидала, что будет так классно и креативно. Путешествие в Черногорию было для меня большим открытием. Ожидания не просто оправдались, а они превысили всё что я могла себе представить.</p>
-                                <div class="testimonial-meta">
-                                    <b>Илья Масурбаниев</b>
+                        @foreach($reviews as $review)
+                            <div class="testimonial-item">
+                                <div class="avatar d-none d-xl-block d-lg-block">
+                                    <img src="{{ $review->image_link }}" alt="Avatar">
+                                    <img src="{{ asset('theme/images/assets/quote-active.png') }}" alt="Quote" class="quote">
+                                </div>
+                                <div class="testimonial-info">
+                                    <p>{{ $review->text }}</p>
+                                    <div class="testimonial-meta">
+                                        <b>{{ $review->name }}</b>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <div class="avatar d-none d-xl-block d-lg-block">
-                                <img src="{{ asset('theme/images/avatars/female-1.jpg') }}" alt="Avatar">
-                                <img src="{{ asset('theme/images/assets/quote-active.png') }}" alt="Quote" class="quote">
-                            </div>
-                            <div class="testimonial-info">
-                                <p>Эта поездочка хоть и коротенькая, но такая насыщенная, такая интересная! Никогда не думала, что так смогу влюбиться в Хорватию. Замечательное солнце, замечательные пляжи, замечательные люди и отлично проведенное время!</p>
-                                <div class="testimonial-meta">
-                                    <b>Инна Гальсалес</b>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <div class="avatar d-none d-xl-block d-lg-block">
-                                <img src="{{ asset('theme/images/avatars/female-3.jpg') }}" alt="Avatar">
-                                <img src="{{ asset('theme/images/assets/quote-active.png') }}" alt="Quote" class="quote">
-                            </div>
-                            <div class="testimonial-info">
-                                <p>Впечатления, которые ни youtube, ни телевизор не покажут. Это надо видеть, ощущать этот колорит, просто погружаться в атмосферу. И я хочу вернуться сюда еще раз.А вы еще сидите дома? Отправляйтесь срочно в путешествия!</p>
-                                <div class="testimonial-meta">
-                                    <b>Алла Кун</b>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                     <div class="place-slider__nav slick-nav">
                         <div class="place-slider__prev slick-nav__prev">

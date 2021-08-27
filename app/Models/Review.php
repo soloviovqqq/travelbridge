@@ -3,27 +3,23 @@
 namespace App\Models;
 
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 
-
 /**
- * Class TourType
+ * Class Review
  * @package App\Models
  *
- * @property string $icon
- * @property string $title
- * @property string $alias
- * @property string $description
- * @property string $small_image
- * @property string $big_image
+ * @property string $name
+ * @property string $text
+ * @property string $image
  * @property int $visible
  * @property int $order
  * @property Carbon $created_at
  * @property Carbon $updated_at
  */
-class TourType extends Model
+class Review extends Model
 {
     /**
      * @return void
@@ -49,17 +45,8 @@ class TourType extends Model
     /**
      * @return string
      */
-    public function getSmallImageLinkAttribute(): string
+    public function getImageLinkAttribute(): string
     {
-        return Storage::url($this->small_image);
-    }
-
-
-    /**
-     * @return string
-     */
-    public function getBigImageLinkAttribute(): string
-    {
-        return Storage::url($this->big_image);
+        return Storage::url($this->image);
     }
 }

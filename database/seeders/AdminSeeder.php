@@ -55,5 +55,12 @@ class AdminSeeder extends Seeder
             'icon' => 'fa-globe',
             'uri' => '/countries'
         ]);
+        $menuModel::query()->create([
+            'parent_id' => 0,
+            'order' => 2,
+            'title' => 'admin.reviews',
+            'icon' => ' fa-commenting-o',
+            'uri' => '/reviews'
+        ]);
     }
 }

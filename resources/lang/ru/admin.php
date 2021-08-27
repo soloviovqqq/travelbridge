@@ -113,4 +113,5 @@ return [
 
     'tour_types' => 'Типы туров',
     'countries' => 'Страны',
+    'reviews' => 'Отзывы',
 ];
