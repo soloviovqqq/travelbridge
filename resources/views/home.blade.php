@@ -17,29 +17,15 @@
                 <h2 class="title title-border-bottom align-center offset-item">Типы туров</h2>
                 <div class="slick-sliders offset-item">
                     <div class="slick-slider explore-slider slider-pd30" data-item="4" data-arrows="true" data-itemScroll="1" data-dots="true" data-centerPadding="30" data-tabletitem="2" data-mobileitem="1" data-mobilearrows="false">
-
-                        @php
-                          $categories = [
-                            ['name' => 'Гастро туры', 'image' => 'gastro.jpeg'],
-                            ['name' => 'Круизы', 'image' => 'cruise.jpeg'],
-                            ['name' => 'Горнолыжные туры', 'image' => 'ski.jpeg'],
-                            ['name' => 'Индивидуальные туры', 'image' => 'spa.jpeg'],
-                            ['name' => 'Свадебные туры', 'image' => 'wedding.jpeg'],
-                            ['name' => 'Туры выходного дня', 'image' => 'bali.jpeg'],
-                            ['name' => 'Экотуры', 'image' => 'tundra.jpeg'],
-                            ['name' => 'Экстремальные туры', 'image' => 'surf.jpeg'],
-                          ];
-                        @endphp
-
-                        @foreach($categories as $category)
+                        @foreach($tourTypes as $tourType)
                         <div class="slick-item">
                             <div class="explore-item dark-sky-blue">
                                 <a href="{{ route('category') }}">
                                     <div class="explore-thumb">
-                                        <img src="{{ asset('theme/images/categories/' . $category['image']) }}" alt="">
+                                        <img src="{{ $tourType->small_image_link }}" alt="">
                                     </div>
                                     <div class="explore-info">
-                                        <h3><a href="{{ route('category') }}">{{ $category['name'] }}</a></h3>
+                                        <h3><a href="{{ route('category') }}">{{ $tourType->title }}</a></h3>
                                         <span>{{ rand(1, 20) }} туров</span>
                                     </div>
                                 </a>
