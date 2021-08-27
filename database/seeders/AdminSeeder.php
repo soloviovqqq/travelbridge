@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Encore\Admin\Auth\Database\Administrator;
+use Encore\Admin\Auth\Database\AdminTablesSeeder;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -17,6 +18,7 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(AdminTablesSeeder::class);
         $this->updateAdmin();
         $this->createMenu();
     }
