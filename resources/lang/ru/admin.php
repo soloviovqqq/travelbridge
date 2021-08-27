@@ -128,4 +128,9 @@ return [
     'faqs' => 'Вопросы',
     'question' => 'Вопрос',
     'answer' => 'Ответ',
+
+    'contact_messages' => 'Сообщения',
+    'message' => 'Сообщение',
+    'phone' => 'Телефон',
+    'shown' => 'Был дан ответ',
 ];

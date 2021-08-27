@@ -59,15 +59,22 @@ class AdminSeeder extends Seeder
             'parent_id' => 0,
             'order' => 2,
             'title' => 'admin.reviews',
-            'icon' => ' fa-commenting-o',
+            'icon' => 'fa-commenting-o',
             'uri' => '/reviews'
         ]);
         $menuModel::query()->create([
             'parent_id' => 0,
             'order' => 3,
             'title' => 'admin.faqs',
-            'icon' => ' fa-question',
+            'icon' => 'fa-question',
             'uri' => '/faqs'
+        ]);
+        $menuModel::query()->create([
+            'parent_id' => 0,
+            'order' => 4,
+            'title' => 'admin.contact_messages',
+            'icon' => 'fa-envelope',
+            'uri' => '/contact-messages'
         ]);
     }
 }

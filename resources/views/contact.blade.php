@@ -17,7 +17,7 @@
                         <div class="contact-text">
                             <div class="contact-box">
                                 <h3>Наши контакты</h3>
-                                <p>г. Киев, ул. Богдана Хмельницкого 3 А</p>
+                                <p>г. Киев, ул. Богдана Хмельницкого 3А</p>
                                 <p>+38 (066) 367 93 18</p>
                                 <p>+38 (050) 959 89 88</p>
                                 <p>book@travelbridge.com.ua</p>
@@ -45,23 +45,45 @@
                         </div>
                     </div>
                     <div class="col-md-6">
+
                         <div class="contact-form">
-                            <form action="#" method="POST" class="form-underline">
-                                <div class="field-input">
-                                    <input type="text" name="first_name" value="" placeholder="Ваше имя">
+                            <form action="{{ route('contact.send_message') }}" method="post" class="form-underline">
+                                @csrf
+                                <div class="field-input is-invalid">
+                                    <input type="text" name="name" value="{{ old('name') }}" placeholder="Ваше имя"
+                                           class="form-control @error('name') is-invalid @enderror">
+                                    @error('name')
+                                        <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                    @enderror
                                 </div>
                                 <div class="field-input">
-                                    <input type="email" name="email" value="" placeholder="Ваш Email">
+                                    <input type="email" name="email" value="{{ old('email') }}" placeholder="Ваш email"
+                                           class="form-control @error('email') is-invalid @enderror">
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                    @enderror
                                 </div>
                                 <div class="field-input">
-                                    <input type="tel" name="tel" value="" placeholder="Ваш номер телефона">
+                                    <input type="text" name="phone" value="{{ old('phone') }}" placeholder="Ваш номер телефона"
+                                           class="form-control @error('phone') is-invalid @enderror">
+                                    @error('phone')
+                                        <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                    @enderror
                                 </div>
                                 <div class="field-textarea">
-                                    <textarea name="message" placeholder="Сообщение"></textarea>
+                                    <textarea name="message" class="form-control @error('message') is-invalid @enderror" placeholder="Ваше сообщение">{{ old('message') }}</textarea>
+                                    @error('message')
+                                        <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                    @enderror
                                 </div>
-                                <div class="field-submit">
+                                <div class="field-submit mb-4">
                                     <input type="submit" value="Отправить сообщение" class="btn">
                                 </div>
+                                @if(Session::has('message'))
+                                    <div class="alert alert-info" role="alert">
+                                        {{ Session::get('message') }}
+                                    </div>
+                                @endif
                             </form>
                         </div>
                     </div>

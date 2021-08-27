@@ -17,4 +17,5 @@ Route::group([
     $router->resource('countries', 'CountryController');
     $router->resource('reviews', 'ReviewController');
     $router->resource('faqs', 'FaqController');
+    $router->resource('contact-messages', 'ContactMessageController');
 });

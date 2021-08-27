@@ -37,7 +37,7 @@
                                             <a href="{{ route('agentam') }}" title="Агентам">Агентам</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('contacts') }}" title="Контакты">Контакты</a>
+                                            <a href="{{ route('contact') }}" title="Контакты">Контакты</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -63,7 +63,7 @@
                                 <a href="{{ route('agentam') }}" title="Агентам">Агентам</a>
                             </li>
                             <li>
-                                <a href="{{ route('contacts') }}" title="Контакты">Контакты</a>
+                                <a href="{{ route('contact') }}" title="Контакты">Контакты</a>
                             </li>
                         </ul>
                     </nav>

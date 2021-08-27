@@ -1243,7 +1243,7 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 .join-team .jt-content a { padding: 0 48px; height: 50px; line-height: 50px; border-radius: 25px; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); font-size: 16px; }
 
 .site-contact { position: relative; }
-.site-contact:before { content: ''; position: absolute; background-color: #f9f9f9; width: 50%; top: 0; bottom: 0; right: 0; }
+.site-contact:before { content: ''; position: absolute; background-color: #f9f9f9; width: 50%; top: 0; bottom: 0; right: 0; z-index: -1;}
 .site-contact h2 { font-size: 24px; font-weight: 500; margin-bottom: 30px; }
 .site-contact .contact-box { margin-bottom: 30px; }
 .site-contact .contact-box a { font-family: "Jost"; font-size: 15px; font-weight: 500; color: #23d3d3; }
@@ -1277,6 +1277,10 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 .form-underline .field-select .sl-icon i { font-size: 24px; vertical-align: 3px; }
 .form-underline .field-select select { width: 100%; border: 0; padding: 0; border-bottom: 2px solid #2d2d2d; height: 40px; line-height: 40px; color: #8d8d8d; padding-left: 30px; }
 .form-underline .field-select select:focus { border: 0; box-shadow: none; outline-offset: 0; outline: 0; border-bottom: 2px solid #2d2d2d; }
+
+.form-underline .form-control {background-color: inherit; box-shadow: none!important;}
+.form-underline input.is-invalid, .form-underline textarea.is-invalid {margin: 0;}
+.contact-form .alert {padding: .75rem 1.25rem}
 
 .widget-reservation .field-select input { margin-bottom: 0; padding-left: 30px; cursor: pointer; background-color: transparent; position: relative; z-index: 2; }
 .widget-reservation .field-select > i { bottom: auto; top: 13px; }

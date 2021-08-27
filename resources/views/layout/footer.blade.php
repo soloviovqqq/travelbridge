@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-lg-3">
                     <aside class="footer__top__nav footer__top__nav--contact">
-                        <h3><a href="{{ route('contacts') }}">Контакты</a></h3>
+                        <h3><a href="{{ route('contact') }}">Контакты</a></h3>
                         <p>г. Киев, ул. Богдана Хмельницкого 3А, оф.203</p>
                         <p><a href="mailto:book@travelbridge.com.ua">book@travelbridge.com.ua</a></p>
                         <p>+38 (066) 367 93 18</p>

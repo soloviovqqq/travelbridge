@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Models\Country;
 use App\Models\Faq;
 use App\Models\Review;
@@ -39,9 +40,7 @@ Route::get('/tours', function () {
     return view('tours');
 })->name('tours');
 
-Route::get('/contacts', function () {
-    return view('contacts');
-})->name('contacts');
+
 
 Route::get('/tour', function () {
     return view('tour');
@@ -58,3 +57,6 @@ Route::get('/hotel', function () {
 Route::get('/tours-group', function () {
     return view('tours-group');
 })->name('tours-group');
+
+Route::get('/contacts', [ContactController::class, 'index'])->name('contact');
+Route::post('/contacts/send_message', [ContactController::class, 'sendMessage'])->name('contact.send_message');
