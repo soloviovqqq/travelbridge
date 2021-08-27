@@ -48,5 +48,12 @@ class AdminSeeder extends Seeder
             'icon' => 'fa-sitemap',
             'uri' => '/tour-types'
         ]);
+        $menuModel::query()->create([
+            'parent_id' => 0,
+            'order' => 1,
+            'title' => 'admin.countries',
+            'icon' => 'fa-globe',
+            'uri' => '/countries'
+        ]);
     }
 }

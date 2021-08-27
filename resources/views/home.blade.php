@@ -173,57 +173,17 @@
                 <h2 class="title title-border-bottom align-center offset-item">Популярные страны<span>Выберите страну, которую хотете посетить</span></h2>
                 <div class="slick-sliders offset-item">
                     <div class="slick-slider featured-slider slider-pd30" data-item="4" data-arrows="true" data-itemScroll="4" data-dots="true" data-centerPadding="30" data-tabletitem="2" data-tabletscroll="2" data-mobileitem="1" data-mobilescroll="1" data-mobilearrows="false">
-                        @php
-                            $countries = [
-                                [
-                                    'img' => 'newyork.jpg',
-                                    'name' => 'Соединенные Штаты',
-                                    'places' => '80',
-                                ],
-                                [
-                                    'img' => 'barca.jpeg',
-                                    'name' => 'Испания',
-                                    'places' => '92',
-                                ],
-                                [
-                                    'img' => 'amsterdam.jpg',
-                                    'name' => 'Нидерланды',
-                                    'places' => '44',
-                                ],
-                                [
-                                    'img' => 'tokyo.jpeg',
-                                    'name' => 'Япония',
-                                    'places' => '54',
-                                ],
-                                [
-                                    'img' => 'paris.jpg',
-                                    'name' => 'Франция',
-                                    'places' => '94',
-                                ],
-                                [
-                                    'img' => 'singapo.jpg',
-                                    'name' => 'Сингапур',
-                                    'places' => '23',
-                                ],
-                                [
-                                    'img' => 'sydney.jpg',
-                                    'name' => 'Австралия',
-                                    'places' => '32',
-                                ],
-                            ];
-                        @endphp
-
                         @foreach($countries as $country)
                         <div class="slick-item">
                             <div class="cities__item hover__box">
                                 <div class="cities__thumb hover__box__thumb">
                                     <a href="{{ route('country') }}">
-                                        <img src="{{ asset('theme/images/city/' . $country['img']) }}" alt="{{ $country['name'] }}">
+                                        <img src="{{ $country->small_image_link }}" alt="{{ $country->title  }}">
                                     </a>
                                 </div>
-                                <h4 class="cities__name">{{ $country['name'] }}</h4>
+                                <h4 class="cities__name">{{ $country->title }}</h4>
                                 <div class="cities__info">
-                                    <p class="cities__number">{{ $country['places'] }} отеля</p>
+                                    <p class="cities__number">{{ rand(1, 140) }} отеля</p>
                                 </div>
                             </div>
                         </div>

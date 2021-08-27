@@ -112,4 +112,5 @@ return [
     'texts' => 'Текст',
 
     'tour_types' => 'Типы туров',
+    'countries' => 'Страны',
 ];
