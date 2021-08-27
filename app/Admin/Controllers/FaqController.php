@@ -30,12 +30,16 @@ class FaqController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new Faq());
-        $grid->column('question', __('admin.question'));
+        $grid->column('question', __('admin.question'))->display(function () {
+            return Str::limit($this->question, 50);
+        });
         $grid->column('answer', __('admin.answer'))->display(function () {
-            return Str::limit($this->answer);
+            return Str::limit($this->answer, 50);
         });
         $grid->column('visible', __('admin.show'))->switch();
-        $grid->column('created_at', __('admin.created_at'));
+        $grid->column('created_at', __('admin.created_at'))->display(function () {
+            return $this->created_at->toDateTimeString();
+        });
         $grid->disableFilter();
         $grid->disableExport();
         $grid->actions(function (Actions $action) {
@@ -51,8 +55,8 @@ class FaqController extends AdminController
     protected function form()
     {
         $form = new Form(new Faq());
-        $form->text('question')->required();
-        $form->textarea('answer')->required();
+        $form->text('question', __('admin.question'))->required();
+        $form->textarea('answer', __('admin.answer'))->required();
         $form->switch('visible', __('admin.show'))->default(1);
         $form->number('order', __('admin.order'))->default(0);
         $form->disableReset();

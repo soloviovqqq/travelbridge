@@ -32,7 +32,9 @@ class CountryController extends AdminController
         $grid = new Grid(new Country());
         $grid->column('title', __('admin.title'));
         $grid->column('visible', __('admin.show'))->switch();
-        $grid->column('created_at', __('admin.created_at'));
+        $grid->column('created_at', __('admin.created_at'))->display(function () {
+            return $this->created_at->toDateTimeString();
+        });
         $grid->disableFilter();
         $grid->disableExport();
         $grid->actions(function (Actions $action) {
@@ -48,14 +50,14 @@ class CountryController extends AdminController
     protected function form()
     {
         $form = new Form(new Country());
-        $form->text('title')->required();
+        $form->text('title',  __('admin.title'))->required();
         $form->hidden('alias')->required();
-        $form->text('slogan');
-        $form->textarea('description')->required();
-        $form->text('currency')->required();
-        $form->text('languages')->required();
-        $form->image('small_image')->required();
-        $form->image('big_image')->required();
+        $form->text('slogan',  __('admin.slogan'));
+        $form->textarea('description',  __('admin.description'))->required();
+        $form->text('currency',  __('admin.currency'))->required();
+        $form->text('languages',  __('admin.languages'))->required();
+        $form->image('small_image',  __('admin.small_image'))->required();
+        $form->image('big_image',  __('admin.big_image'))->required();
         $form->switch('visible', __('admin.show'))->default(1);
         $form->number('order', __('admin.order'))->default(0);
         $form->disableReset();

@@ -112,7 +112,20 @@ return [
     'texts' => 'Текст',
 
     'tour_types' => 'Типы туров',
+    'icon_help' => 'Иконки нужно брать лишь <a href="https://icons8.com/line-awesome" target="_blank">тут</a> и сохранять в формате <b>las la-fish</b>',
+    'image' => 'Картинка',
+    'small_image' => 'Маленькая картинка',
+    'big_image' => 'Большая картинка',
+    'image_help' => 'Желательный размер изображения - :width x :height. Так же делательно перед загрузкой <a href="/" target="_blank">оптимизировать изображение.</a>',
+
     'countries' => 'Страны',
+    'slogan' => 'Слоган',
+    'currency' => 'Валюта',
+    'languages' => 'Языки',
+
     'reviews' => 'Отзывы',
+
     'faqs' => 'Вопросы',
+    'question' => 'Вопрос',
+    'answer' => 'Ответ',
 ];

@@ -31,11 +31,13 @@ class ReviewController extends AdminController
     {
         $grid = new Grid(new Review());
         $grid->column('name', __('admin.name'));
-        $grid->column('text', __('admin.text'))->display(function () {
+        $grid->column('text', __('admin.texts'))->display(function () {
             return Str::limit($this->text);
         });
         $grid->column('visible', __('admin.show'))->switch();
-        $grid->column('created_at', __('admin.created_at'));
+        $grid->column('created_at', __('admin.created_at'))->display(function () {
+            return $this->created_at->toDateTimeString();
+        });
         $grid->disableFilter();
         $grid->disableExport();
         $grid->actions(function (Actions $action) {
@@ -51,9 +53,9 @@ class ReviewController extends AdminController
     protected function form()
     {
         $form = new Form(new Review());
-        $form->text('name')->required();
-        $form->textarea('text')->required();
-        $form->image('image')->required();
+        $form->text('name', __('admin.name'))->required();
+        $form->textarea('text', __('admin.texts'))->required();
+        $form->image('image', __('admin.image'))->required();
         $form->switch('visible', __('admin.show'))->default(1);
         $form->number('order', __('admin.order'))->default(0);
         $form->disableReset();

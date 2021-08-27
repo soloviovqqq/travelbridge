@@ -32,7 +32,9 @@ class TourTypeController extends AdminController
         $grid = new Grid(new TourType());
         $grid->column('title', __('admin.title'));
         $grid->column('visible', __('admin.show'))->switch();
-        $grid->column('created_at', __('admin.created_at'));
+        $grid->column('created_at', __('admin.created_at'))->display(function () {
+            return $this->created_at->toDateTimeString();
+        });
         $grid->disableFilter();
         $grid->disableExport();
         $grid->actions(function (Actions $action) {
@@ -47,14 +49,13 @@ class TourTypeController extends AdminController
      */
     protected function form()
     {
-        $iconHelp = 'Иконки нужно брать лишь <a href="https://icons8.com/line-awesome" target="_blank">тут</a> и сохранять в формате las la-fish';
         $form = new Form(new TourType());
-        $form->text('icon')->help($iconHelp)->required();
-        $form->text('title')->required();
+        $form->text('icon', __('admin.icon'))->help(__('admin.icon_help'))->required();
+        $form->text('title',  __('admin.title'))->required();
         $form->hidden('alias')->required();
-        $form->textarea('description')->required();
-        $form->image('small_image')->required();
-        $form->image('big_image')->required();
+        $form->textarea('description', __('admin.description'))->required();
+        $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 300, 'height' => 300]))->required();
+        $form->image('big_image', __('admin.big_image'))->help(__('admin.image_help', ['width' => 300, 'height' => 300]))->required();
         $form->switch('visible', __('admin.show'))->default(1);
         $form->number('order', __('admin.order'))->default(0);
         $form->disableReset();
