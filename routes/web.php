@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Country;
+use App\Models\Faq;
 use App\Models\Review;
 use App\Models\TourType;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,7 @@ Route::get('/', function () {
     return view('home', [
         'tourTypes' => TourType::query()->visible()->get(),
         'countries' => Country::query()->visible()->get(),
+        'faqs' => Faq::query()->visible()->get(),
         'reviews' => Review::query()->visible()->get(),
         'transparentHeader' => true,
     ]);
