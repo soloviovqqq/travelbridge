@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\TourController;
@@ -34,34 +35,15 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
-Route::get('/country', function () {
-    return view('country');
-})->name('country');
-
-Route::get('/category', function () {
-    return view('category');
-})->name('category');
-
 Route::get('/tours', function () {
     return view('tours');
 })->name('tours');
-
-Route::get('/tour', function () {
-    return view('tour');
-})->name('tour-t');
-
-Route::get('/agentam', function () {
-    return view('agentam');
-})->name('agentam');
-
-Route::get('/hotel', function () {
-    return view('hotel');
-})->name('hotel-t');
 
 Route::get('/tours-group', function () {
     return view('tours-group');
 })->name('tours-group');
 
+Route::get('/agents', [Controller::class, 'agents'])->name('agents');
 
 Route::get('/tour-type/{tourType}', [TourTypeController::class, 'index'])->name('tour-type');
 Route::get('/tour/{tour}', [TourController::class, 'index'])->name('tour');

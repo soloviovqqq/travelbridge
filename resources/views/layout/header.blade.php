@@ -34,7 +34,7 @@
                                             <a href="{{ route('tours') }}" title="Рекламные туры">Рекламные туры</a>
                                         </li>
                                         <li>
-                                            <a href="{{ route('agentam') }}" title="Агентам">Агентам</a>
+                                            <a href="{{ route('agents') }}" title="Агентам">Агентам</a>
                                         </li>
                                         <li>
                                             <a href="{{ route('contact') }}" title="Контакты">Контакты</a>
@@ -60,7 +60,7 @@
                                 <a href="{{ route('tours') }}" title="Рекламные туры">Рекламные туры</a>
                             </li>
                             <li>
-                                <a href="{{ route('agentam') }}" title="Агентам">Агентам</a>
+                                <a href="{{ route('agents') }}" title="Агентам">Агентам</a>
                             </li>
                             <li>
                                 <a href="{{ route('contact') }}" title="Контакты">Контакты</a>
