@@ -19,6 +19,7 @@ class TourTypeController extends Controller
     {
         return view('tour-type', [
             'tourType' => $tourType,
+            'tours' => $tourType->tours()->paginate(),
         ]);
     }
 }

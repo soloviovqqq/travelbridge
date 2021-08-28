@@ -49,7 +49,7 @@
         <div class="trending trending-business">
             <div class="container">
                 <h2 class="title title-border-bottom align-center offset-item">Наши новинки</h2>
-                <div class="slick-sliders offset-item">å
+                <div class="slick-sliders offset-item">
                     <div class="slick-slider trending-slider slider-pd30" data-item="4" data-arrows="true" data-itemScroll="4" data-dots="true" data-centerPadding="30" data-tabletitem="2" data-tabletscroll="2" data-smallpcscroll="3" data-smallpcitem="3" data-mobileitem="1" data-mobilescroll="1" data-mobilearrows="false">
                         @foreach($tours as $tour)
                             @include('utils.tour_item', $tour)
@@ -63,7 +63,7 @@
                             <i class="las la-angle-right"></i>
                         </div>
                     </div>
-                </div>å
+                </div>
             </div>
         </div>
 

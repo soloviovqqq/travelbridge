@@ -27,8 +27,8 @@ class CreateToursTable extends Migration
             $table->string('video_link')->nullable();
             $table->tinyInteger('hot');
 
+            $table->string('info_dates')->nullable();
             $table->string('info_places')->nullable();
-            $table->string('info_cities')->nullable();
             $table->string('info_meals')->nullable();
             $table->string('info_medical')->nullable();
             $table->string('info_kids')->nullable();
@@ -36,7 +36,7 @@ class CreateToursTable extends Migration
 
             $table->json('schedule')->nullable();
             $table->json('program')->nullable();
-            $table->json('faqs')->nullable();
+            $table->json('faq')->nullable();
             $table->tinyInteger('visible');
             $table->integer('order')->default(0);
             $table->timestamps();

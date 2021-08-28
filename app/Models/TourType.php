@@ -5,6 +5,7 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Storage;
 
 
@@ -69,5 +70,13 @@ class TourType extends Model
     public function getBigImageLinkAttribute(): string
     {
         return Storage::url($this->big_image);
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function tours(): HasMany
+    {
+        return $this->hasMany(Tour::class);
     }
 }

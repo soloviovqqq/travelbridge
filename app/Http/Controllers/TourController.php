@@ -17,8 +17,16 @@ class TourController extends Controller
      */
     public function index(Tour $tour): View
     {
+        $tours = Tour::query()
+            ->where('tour_type_id', $tour->tour_type_id)
+            ->whereKeyNot($tour->getKey())
+            ->inRandomOrder()
+            ->limit(4)
+            ->get();
+
         return view('tour', [
-            '$tour' => $tour,
+            'tour' => $tour,
+            'tours' => $tours,
         ]);
     }
 }

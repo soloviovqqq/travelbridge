@@ -66,8 +66,8 @@ class TourController extends AdminController
             $form->switch('visible', __('admin.show'))->default(1);
             $form->number('order', __('admin.order'))->default(0);
         })->tab(__('admin.info_block'), function (Form $form) {
+            $form->text('info_dates', __('admin.info_dates'));
             $form->text('info_places', __('admin.info_places'));
-            $form->text('info_cities', __('admin.info_cities'));
             $form->text('info_meals', __('admin.info_meals'));
             $form->text('info_medical', __('admin.info_medical'));
             $form->text('info_kids', __('admin.info_kids'));
