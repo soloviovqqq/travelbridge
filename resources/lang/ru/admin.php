@@ -123,6 +123,8 @@ return [
     'currency' => 'Валюта',
     'languages' => 'Языки',
 
+    'hotels' => 'Отели',
+
     'reviews' => 'Отзывы',
 
     'faqs' => 'Вопросы',
