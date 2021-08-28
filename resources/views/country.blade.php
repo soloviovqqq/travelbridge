@@ -62,9 +62,9 @@
             </div>
         </div>
 
-        <div class="other-city banner-dark">
+        <div class="similar-places">
             <div class="container">
-                <h2 class="title title--while">Другие страны</h2>
+                <h2 class="title">Другие страны</h2>
                 <div class="other-city__content">
                     <div class="row">
                         @foreach($countries as $country)
