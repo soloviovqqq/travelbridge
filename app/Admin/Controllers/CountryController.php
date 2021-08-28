@@ -56,8 +56,8 @@ class CountryController extends AdminController
         $form->textarea('description',  __('admin.description'))->required();
         $form->text('currency',  __('admin.currency'))->required();
         $form->text('languages',  __('admin.languages'))->required();
-        $form->image('small_image',  __('admin.small_image'))->required();
-        $form->image('big_image',  __('admin.big_image'))->required();
+        $form->image('small_image',  __('admin.small_image'))->help(__('admin.image_help', ['width' => 540, 'height' => 720]))->required();
+        $form->image('big_image',  __('admin.big_image'))->help(__('admin.image_help', ['width' => 1440, 'height' => 400]))->required();
         $form->switch('visible', __('admin.show'))->default(1);
         $form->number('order', __('admin.order'))->default(0);
         $form->disableReset();

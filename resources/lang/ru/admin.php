@@ -116,7 +116,7 @@ return [
     'image' => 'Картинка',
     'small_image' => 'Маленькая картинка',
     'big_image' => 'Большая картинка',
-    'image_help' => 'Желательный размер изображения - :width x :height. Так же делательно перед загрузкой <a href="/" target="_blank">оптимизировать изображение.</a>',
+    'image_help' => 'Желательный размер изображения - :width x :height. Так же делательно перед загрузкой <a href="https://imagecompressor.com" target="_blank">оптимизировать изображение.</a>',
 
     'countries' => 'Страны',
     'slogan' => 'Слоган',

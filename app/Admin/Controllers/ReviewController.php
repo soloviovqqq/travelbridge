@@ -55,7 +55,7 @@ class ReviewController extends AdminController
         $form = new Form(new Review());
         $form->text('name', __('admin.name'))->required();
         $form->textarea('text', __('admin.texts'))->required();
-        $form->image('image', __('admin.image'))->required();
+        $form->image('image', __('admin.image'))->help(__('admin.image_help', ['width' => 200, 'height' => 200]))->required();
         $form->switch('visible', __('admin.show'))->default(1);
         $form->number('order', __('admin.order'))->default(0);
         $form->disableReset();
