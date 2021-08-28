@@ -27,6 +27,14 @@ use Illuminate\Support\Facades\Storage;
 class Country extends Model
 {
     /**
+     * @return string
+     */
+    public function getRouteKeyName(): string
+    {
+        return 'alias';
+    }
+
+    /**
      * @return void
      */
     protected static function boot(): void
