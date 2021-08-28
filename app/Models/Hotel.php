@@ -13,6 +13,49 @@ use Illuminate\Support\Facades\Storage;
  */
 class Hotel extends Model
 {
+    public const AMENITIES = [
+        [
+            'key' => 'wifi',
+            'img' => 'wf.svg',
+            'text' => 'Бесплатный Wifi',
+        ],
+        [
+            'key' => 'reservations',
+            'img' => 'cld.svg',
+            'text' => 'Бесплатная бронь',
+        ],
+        [
+            'key' => 'credit_cards',
+            'img' => 'card.svg',
+            'text' => 'Прием кредитных карт',
+        ],
+        [
+            'key' => 'non_smoking',
+            'img' => 'smk.svg',
+            'text' => 'Курение запрещено',
+        ],
+        [
+            'key' => 'air_conditioner',
+            'img' => 'air.svg',
+            'text' => 'Кондиционер',
+        ],
+        [
+            'key' => 'car_parking',
+            'img' => 'car.svg',
+            'text' => 'Бесплатная парковка',
+        ],
+        [
+            'key' => 'cocktails',
+            'img' => 'ct.svg',
+            'text' => 'Бесплатные коктели',
+        ],
+        [
+            'key' => 'pool',
+            'img' => 'pool.svg',
+            'text' => 'Басейн',
+        ],
+    ];
+
     /**
      * @var int
      */
@@ -23,6 +66,7 @@ class Hotel extends Model
      */
     protected $casts = [
         'faq' =>'json',
+        'amenities' =>'json',
     ];
 
     /**
@@ -67,6 +111,33 @@ class Hotel extends Model
     public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class);
+    }
+
+    /**
+     * @param $value
+     * @return array
+     */
+    public function getFaqAttribute($value): array
+    {
+        return array_values(json_decode($value, true) ?: []);
+    }
+
+    /**
+     * @param $value
+     */
+    public function setFaqAttribute($value): void
+    {
+        $this->attributes['faq'] = json_encode(array_values($value));
+    }
+
+    /**
+     * @return array
+     */
+    public function getAmenitiesArrayAttribute(): array
+    {
+        return collect(self::AMENITIES)->filter(function (array $amenity) {
+            return in_array($amenity['key'], json_decode($this->attributes['amenities']), true);
+        })->toArray();
     }
 }
 

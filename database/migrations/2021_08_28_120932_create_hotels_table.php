@@ -19,6 +19,7 @@ class CreateHotelsTable extends Migration
             $table->tinyInteger('rating');
             $table->tinyInteger('symbol_price');
             $table->string('place');
+            $table->json('amenities')->nullable();
 
             $table->text('description');
             $table->string('small_image');
@@ -31,15 +32,6 @@ class CreateHotelsTable extends Migration
             $table->string('info_price')->nullable();
 
             $table->json('faq')->nullable();
-
-            $table->tinyInteger('wifi');
-            $table->tinyInteger('reservations');
-            $table->tinyInteger('credit_cards');
-            $table->tinyInteger('non_smoking');
-            $table->tinyInteger('air_conditioner');
-            $table->tinyInteger('car_parking');
-            $table->tinyInteger('cocktails');
-            $table->tinyInteger('pool');
 
             $table->tinyInteger('visible');
             $table->integer('order')->default(0);

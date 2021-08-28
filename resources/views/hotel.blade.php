@@ -68,73 +68,34 @@
                             </div>
                             <div class="place__box place__box-hightlight">
                                 <div class="hightlight-grid">
-                                    <div class="place__amenities">
-                                        <img src="{{ asset('theme/images/icons/amenities/wf.svg') }}">
-                                        <span>Wifi</span>
-                                    </div>
-                                    <div class="place__amenities">
-                                        <img src="{{ asset('theme/images/icons/amenities/cld.svg') }}">
-                                        <span>Reservations</span>
-                                    </div>
-                                    <div class="place__amenities">
-                                        <img src="{{ asset('theme/images/icons/amenities/card.svg') }}">
-                                        <span>Credit cards</span>
-                                    </div>
-                                    <div class="place__amenities">
-                                        <img src="{{ asset('theme/images/icons/amenities/smk.svg') }}">
-                                        <span>Non smoking</span>
-                                    </div>
-                                    <div class="place__amenities">
-                                        <img src="{{ asset('theme/images/icons/amenities/air.svg') }}">
-                                        <span>Air conditioner</span>
-                                    </div>
-                                    <a href="#book-now" title="More" class="hightlight-count open-popup">+(4)</a>
-
-                                    <div class="popup-wrap" id="book-now">
-                                        <div class="popup-bg popupbg-close"></div>
-                                        <div class="popup-middle">
-                                            <a title="Close" href="#" class="popup-close">
-                                                <i class="la la-times"></i>
-                                            </a>
-                                            <h3>Amenities</h3>
-                                            <div class="popup-content">
-                                                <div class="hightlight-flex">
-                                                    <div class="place__amenities">
-                                                        <img src="{{ asset('theme/images/icons/amenities/wf.svg') }}">
-                                                        <span>Wifi</span>
-                                                    </div>
-                                                    <div class="place__amenities">
-                                                        <img src="{{ asset('theme/images/icons/amenities/cld.svg') }}">
-                                                        <span>Reservations</span>
-                                                    </div>
-                                                    <div class="place__amenities">
-                                                        <img src="{{ asset('theme/images/icons/amenities/card.svg') }}">
-                                                        <span>Credit cards</span>
-                                                    </div>
-                                                    <div class="place__amenities">
-                                                        <img src="{{ asset('theme/images/icons/amenities/smk.svg') }}">
-                                                        <span>Non smoking</span>
-                                                    </div>
-                                                    <div class="place__amenities">
-                                                        <img src="{{ asset('theme/images/icons/amenities/air.svg') }}">
-                                                        <span>Air conditioner</span>
-                                                    </div>
-                                                    <div class="place__amenities">
-                                                        <img src="{{ asset('theme/images/icons/amenities/car.svg') }}">
-                                                        <span>Car parking</span>
-                                                    </div>
-                                                    <div class="place__amenities">
-                                                        <img src="{{ asset('theme/images/icons/amenities/ct.svg') }}">
-                                                        <span>Cocktails</span>
-                                                    </div>
-                                                    <div class="place__amenities">
-                                                        <img src="{{ asset('theme/images/icons/amenities/pool.svg') }}">
-                                                        <span>Pool</span>
+                                    @foreach(array_slice($hotel->amenities_array, 0, 5) as $amenity)
+                                        <div class="place__amenities">
+                                            <img src="{{ asset('theme/images/icons/amenities/' . $amenity['img']) }}">
+                                            <span>{{ $amenity['text'] }}</span>
+                                        </div>
+                                    @endforeach
+                                    @if(count($hotel->amenities_array) > 5)
+                                        <a href="#book-now" title="More" class="hightlight-count open-popup">+({{ count($hotel->amenities_array) - 5 }})</a>
+                                        <div class="popup-wrap" id="book-now">
+                                            <div class="popup-bg popupbg-close"></div>
+                                            <div class="popup-middle">
+                                                <a title="Close" href="#" class="popup-close">
+                                                    <i class="la la-times"></i>
+                                                </a>
+                                                <h3>Удобства</h3>
+                                                <div class="popup-content">
+                                                    <div class="hightlight-flex">
+                                                        @foreach($hotel->amenities_array as $amenity)
+                                                            <div class="place__amenities">
+                                                                <img src="{{ asset('theme/images/icons/amenities/' . $amenity['img']) }}">
+                                                                <span>{{ $amenity['text'] }}</span>
+                                                            </div>
+                                                        @endforeach
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    @endif
                                 </div>
                             </div>
                             <div class="place__box place__box-overview">

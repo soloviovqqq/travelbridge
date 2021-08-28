@@ -62,6 +62,7 @@ class HotelController extends AdminController
             $form->textarea('description', __('admin.description'))->required();
             $form->url('video_link', __('admin.video_link'));
             $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 540, 'height' => 500]))->required();
+            $form->multipleSelect('amenities')->options($this->getAmenities());
             $form->switch('visible', __('admin.show'))->default(1);
             $form->number('order', __('admin.order'))->default(0);
         })->tab(__('admin.info_block'), function (Form $form) {
@@ -70,15 +71,6 @@ class HotelController extends AdminController
             $form->text('info_medical', __('admin.info_medical'));
             $form->text('info_kids', __('admin.info_kids'));
             $form->text('info_price', __('admin.info_price'));
-        })->tab(__('admin.amenities'), function (Form $form) {
-            $form->switch('wifi', __('admin.wifi'))->default(1);
-            $form->switch('reservations', __('admin.reservations'))->default(1);
-            $form->switch('credit_cards', __('admin.credit_cards'))->default(1);
-            $form->switch('non_smoking', __('admin.non_smoking'))->default(1);
-            $form->switch('air_conditioner', __('admin.air_conditioner'))->default(1);
-            $form->switch('car_parking', __('admin.car_parking'))->default(1);
-            $form->switch('cocktails', __('admin.cocktails'))->default(1);
-            $form->switch('pool', __('admin.pool'))->default(1);
         })->tab(__('admin.faqs'), function (Form $form) {
             $form->table('faq', __('admin.faqs'), function ($table) {
                 $table->text('question', __('admin.question'));
@@ -107,5 +99,15 @@ class HotelController extends AdminController
         return Country::all()->mapWithKeys(function (Country $country) {
             return [$country->getKey() => $country->title];
         })->all();
+    }
+
+    /**
+     * @return array
+     */
+    private function getAmenities(): array
+    {
+        return collect(Hotel::AMENITIES)->mapWithKeys(function ($amenity) {
+            return [$amenity['key'] => $amenity['text']];
+        })->toArray();
     }
 }
