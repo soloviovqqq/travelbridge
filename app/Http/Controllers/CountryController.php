@@ -19,6 +19,7 @@ class CountryController extends Controller
     {
         return view('country', [
             'country' => $country,
+            'hotels' => $country->hotels()->paginate(),
             'countries' => Country::query()->whereKeyNot($country->getKey())->inRandomOrder()->limit(4)->get(),
         ]);
     }
