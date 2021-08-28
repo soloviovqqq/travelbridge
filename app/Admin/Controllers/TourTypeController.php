@@ -51,6 +51,7 @@ class TourTypeController extends AdminController
     {
         $form = new Form(new TourType());
         $form->text('icon', __('admin.icon'))->help(__('admin.icon_help'))->required();
+        $form->select('color', __('admin.color'))->options($this->getColors())->help($this->getColorHelp())->required();
         $form->text('title',  __('admin.title'))->required();
         $form->hidden('alias')->required();
         $form->textarea('description', __('admin.description'))->required();
@@ -70,5 +71,29 @@ class TourTypeController extends AdminController
         });
 
         return $form;
+    }
+
+    /**
+     * @return array
+     */
+    private function getColors(): array
+    {
+        return collect(TourType::COLORS)->mapWithKeys(function ($color) {
+            return [$color => $color];
+        })->toArray();
+    }
+
+    /**
+     * @return string
+     */
+    private function getColorHelp(): string
+    {
+        return '<style> span.tour-label { color: white; padding: 1px 8px; border-radius: 5px}</style> ' .
+            '<span class="tour-label" style="background-color: #f0626c;">rosy-pink</span> ' .
+            '<span class="tour-label" style="background-color: #d763d7;">purple</span> ' .
+            '<span class="tour-label" style="background-color: #5b5ff9;">blue</span> ' .
+            '<span class="tour-label" style="background-color: #ffb44f;">orange</span> ' .
+            '<span class="tour-label" style="background-color: #846fcd;">charcoal-purple</span> ' .
+            '<span class="tour-label" style="background-color: #78cc58;">green</span>';
     }
 }

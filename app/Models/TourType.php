@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Storage;
  * @package App\Models
  *
  * @property string $icon
+ * @property string $color
  * @property string $title
  * @property string $alias
  * @property string $description
@@ -26,6 +27,15 @@ use Illuminate\Support\Facades\Storage;
  */
 class TourType extends Model
 {
+    public const COLORS = [
+        'rosy-pink',
+        'purple',
+        'blue',
+        'orange',
+        'charcoal-purple',
+        'green',
+    ];
+
     /**
      * @return string
      */

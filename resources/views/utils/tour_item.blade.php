@@ -4,7 +4,7 @@
             <a class="entry-thumb" href="{{ route('tour', $tour) }}">
                 <img src="{{ $tour->small_image_link }}" alt=""/>
             </a>
-            <a class="entry-category blue" href="{{ route('tour-type', $tour->tourType) }}">
+            <a class="entry-category {{ $tour->tourType->color }}" href="{{ route('tour-type', $tour->tourType) }}">
                 <i class="{{ $tour->tourType->icon }}"></i><span>{{ $tour->tourType->title }}</span>
             </a>
         </div>
