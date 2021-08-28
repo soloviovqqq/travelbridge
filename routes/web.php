@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\TourTypeController;
 use App\Models\Country;
 use App\Models\Faq;
 use App\Models\Review;
@@ -58,7 +59,7 @@ Route::get('/tours-group', function () {
 })->name('tours-group');
 
 
+Route::get('/tour-type/{tourType}', [TourTypeController::class, 'index'])->name('tour-type');
 Route::get('/country/{country}', [CountryController::class, 'index'])->name('country');
-
 Route::get('/contacts', [ContactController::class, 'index'])->name('contact');
-Route::post('/contacts/send_message', [ContactController::class, 'sendMessage'])->name('contact.send_message');
+Route::post('/contacts/send-message', [ContactController::class, 'sendMessage'])->name('contact.send-message');

@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\SendContactMessageRequest;
-use App\Models\ContactMessage;
-use App\Models\Country;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Session;
+use App\Models\Country;
 
 /**
  * Class CountryController

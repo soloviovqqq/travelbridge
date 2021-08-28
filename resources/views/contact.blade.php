@@ -47,7 +47,7 @@
                     <div class="col-md-6">
 
                         <div class="contact-form">
-                            <form action="{{ route('contact.send_message') }}" method="post" class="form-underline">
+                            <form action="{{ route('contact.send-message') }}" method="post" class="form-underline">
                                 @csrf
                                 <div class="field-input is-invalid">
                                     <input type="text" name="name" value="{{ old('name') }}" placeholder="Ваше имя"

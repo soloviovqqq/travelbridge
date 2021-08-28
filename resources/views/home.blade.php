@@ -20,12 +20,12 @@
                         @foreach($tourTypes as $tourType)
                         <div class="slick-item">
                             <div class="explore-item dark-sky-blue">
-                                <a href="{{ route('category') }}">
+                                <a href="{{ route('tour-type', $tourType) }}">
                                     <div class="explore-thumb">
                                         <img src="{{ $tourType->small_image_link }}" alt="">
                                     </div>
                                     <div class="explore-info">
-                                        <h3><a href="{{ route('category') }}">{{ $tourType->title }}</a></h3>
+                                        <h3><a href="{{ route('tour-type', $tourType) }}">{{ $tourType->title }}</a></h3>
                                         <span>{{ rand(1, 20) }} туров</span>
                                     </div>
                                 </a>
