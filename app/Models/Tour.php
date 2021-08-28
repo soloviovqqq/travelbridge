@@ -22,6 +22,7 @@ class Tour extends Model
      * @var array
      */
     protected $casts = [
+        'images' =>'json',
         'schedule' =>'json',
         'program' =>'json',
         'faq' =>'json',
@@ -69,6 +70,23 @@ class Tour extends Model
     public function tourType(): BelongsTo
     {
         return $this->belongsTo(TourType::class);
+    }
+
+    /**
+     * @param $value
+     * @return array
+     */
+    public function getImagesAttribute($value): array
+    {
+        return array_values(json_decode($value, true) ?: []);
+    }
+
+    /**
+     * @param $value
+     */
+    public function setImagesAttribute($value): void
+    {
+        $this->attributes['images'] = json_encode(array_values($value));
     }
 
     /**

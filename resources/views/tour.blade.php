@@ -13,14 +13,13 @@
         <div class="place">
             <div class="slick-sliders">
                 <div class="slick-slider" data-item="1"  data-itemScroll="1" data-dots="false" data-infinite="false" data-centerMode="false" data-centerPadding="0">
-
-                    @for($i = 1; $i <= 4;$i++)
+                    @foreach($tour->images as $image)
                         <div class="place-slider__item">
-                            <a class="venobox" href="{{ asset("theme/images/listing/g$i.jpeg") }}" data-gall="pls_slider">
-                                <img src="{{ asset("theme/images/listing/g$i.jpeg") }}" alt="slider-01">
+                            <a class="venobox" href="{{ \Illuminate\Support\Facades\Storage::url($image['image']) }}" data-gall="pls_slider">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url($image['image']) }}" alt="slider-01">
                             </a>
                         </div>
-                    @endfor
+                    @endforeach
                 </div>
 
                 <div class="place-gallery">

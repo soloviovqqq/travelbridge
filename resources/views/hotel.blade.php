@@ -13,13 +13,13 @@
         <div class="place">
             <div class="slick-sliders">
                 <div class="slick-slider" data-item="1" data-itemScroll="1" data-dots="false" data-infinite="false" data-centerMode="false" data-centerPadding="0">
-                    @for($i = 1; $i <= 5;$i++)
+                    @foreach($hotel->images as $image)
                         <div class="place-slider__item">
-                            <a class="venobox" href="{{ asset("theme/images/hotels/Martinez_hotel$i.jpeg") }}" data-gall="pls_slider">
-                                <img src="{{ asset("theme/images/hotels/Martinez_hotel$i.jpeg") }}" alt="slider-01">
+                            <a class="venobox" href="{{ \Illuminate\Support\Facades\Storage::url($image['image']) }}" data-gall="pls_slider">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url($image['image']) }}" alt="slider-01">
                             </a>
                         </div>
-                    @endfor
+                    @endforeach
                 </div>
 
                 <div class="place-gallery">
@@ -163,7 +163,7 @@
                                         <p>Свяжитесь с нами:</p>
                                         <div class="button-wrap mt-2">
                                             <div class="button"><a href="#" class="btn">Позвонить</a></div>
-                                            <div class="button"><a href="#" class="btn btn-border">Написать</a></div>
+                                            <div class="button"><a href="https://t.me/travelbridge" class="btn btn-border" target="_blank">Написать</a></div>
                                         </div>
                                     </div>
                                 </div>

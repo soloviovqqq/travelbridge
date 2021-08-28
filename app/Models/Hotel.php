@@ -65,6 +65,7 @@ class Hotel extends Model
      * @var array
      */
     protected $casts = [
+        'images' =>'json',
         'faq' =>'json',
         'amenities' =>'json',
     ];
@@ -111,6 +112,23 @@ class Hotel extends Model
     public function country(): BelongsTo
     {
         return $this->belongsTo(Country::class);
+    }
+
+    /**
+     * @param $value
+     * @return array
+     */
+    public function getImagesAttribute($value): array
+    {
+        return array_values(json_decode($value, true) ?: []);
+    }
+
+    /**
+     * @param $value
+     */
+    public function setImagesAttribute($value): void
+    {
+        $this->attributes['images'] = json_encode(array_values($value));
     }
 
     /**
