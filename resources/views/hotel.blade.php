@@ -124,6 +124,10 @@
                                                         <img src="theme/images/icons/amenities/ct.svg" alt="Cocktails">
                                                         <span>Cocktails</span>
                                                     </div>
+                                                    <div class="place__amenities">
+                                                        <img src="theme/images/icons/amenities/pool.svg" alt="Cocktails">
+                                                        <span>Pool</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>

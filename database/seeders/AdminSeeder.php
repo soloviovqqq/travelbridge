@@ -59,6 +59,13 @@ class AdminSeeder extends Seeder
         ]);
         $menuModel::query()->create([
             'parent_id' => 0,
+            'order' => 1,
+            'title' => 'admin.hotels',
+            'icon' => 'fa-building',
+            'uri' => '/hotels'
+        ]);
+        $menuModel::query()->create([
+            'parent_id' => 0,
             'order' => 2,
             'title' => 'admin.reviews',
             'icon' => 'fa-commenting-o',

@@ -5,6 +5,7 @@ namespace App\Models;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Support\Facades\Storage;
 
 /**
@@ -54,7 +55,6 @@ class Country extends Model
         return $query->where('visible', true);
     }
 
-
     /**
      * @return string
      */
@@ -63,12 +63,19 @@ class Country extends Model
         return Storage::url($this->small_image);
     }
 
-
     /**
      * @return string
      */
     public function getBigImageLinkAttribute(): string
     {
         return Storage::url($this->big_image);
+    }
+
+    /**
+     * @return HasMany
+     */
+    public function hotels(): HasMany
+    {
+        return $this->hasMany(Hotel::class);
     }
 }

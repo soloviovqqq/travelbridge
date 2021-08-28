@@ -6,6 +6,6 @@
     </div>
     <h4 class="cities__name">{{ $country->title }}</h4>
     <div class="cities__info">
-        <p class="cities__number">{{ rand(1, 140) }} отеля</p>
+        <p class="cities__number">{{ $country->hotels_count }} отеля</p>
     </div>
 </div>

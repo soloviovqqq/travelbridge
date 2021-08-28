@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home', [
         'tourTypes' => TourType::query()->visible()->get(),
-        'countries' => Country::query()->visible()->get(),
+        'countries' => Country::query()->withCount('hotels')->visible()->get(),
         'faqs' => Faq::query()->visible()->get(),
         'reviews' => Review::query()->visible()->get(),
         'transparentHeader' => true,
