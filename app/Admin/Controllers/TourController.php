@@ -61,7 +61,7 @@ class TourController extends AdminController
             $form->textarea('small_description', __('admin.small_description'))->required();
             $form->textarea('description', __('admin.description'))->required();
             $form->url('video_link', __('admin.video_link'));
-            $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 500, 'height' => 420]))->required();
+            $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 500, 'height' => 420]))->uniqueName()->required();
             $form->switch('hot', __('admin.hot'))->default(0);
             $form->switch('visible', __('admin.show'))->default(1);
             $form->number('order', __('admin.order'))->default(0);

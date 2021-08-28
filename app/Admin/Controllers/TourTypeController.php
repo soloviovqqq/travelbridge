@@ -55,8 +55,8 @@ class TourTypeController extends AdminController
         $form->text('title',  __('admin.title'))->required();
         $form->hidden('alias')->required();
         $form->textarea('description', __('admin.description'))->required();
-        $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 540, 'height' => 360]))->required();
-        $form->image('big_image', __('admin.big_image'))->help(__('admin.image_help', ['width' => 1920, 'height' => 450]))->required();
+        $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 540, 'height' => 360]))->uniqueName()->required();
+        $form->image('big_image', __('admin.big_image'))->help(__('admin.image_help', ['width' => 1920, 'height' => 450]))->uniqueName()->required();
         $form->switch('visible', __('admin.show'))->default(1);
         $form->number('order', __('admin.order'))->default(0);
         $form->disableReset();
