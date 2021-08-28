@@ -49,122 +49,21 @@
         <div class="trending trending-business">
             <div class="container">
                 <h2 class="title title-border-bottom align-center offset-item">Наши новинки</h2>
-                <div class="slick-sliders offset-item">
+                <div class="slick-sliders offset-item">å
                     <div class="slick-slider trending-slider slider-pd30" data-item="4" data-arrows="true" data-itemScroll="4" data-dots="true" data-centerPadding="30" data-tabletitem="2" data-tabletscroll="2" data-smallpcscroll="3" data-smallpcitem="3" data-mobileitem="1" data-mobilescroll="1" data-mobilearrows="false">
-                        @for($i = 0; $i < 5;$i++)
-                        <div class="place-item layout-02 place-hover">
-                            <div class="place-inner">
-                                <div class="place-thumb hover-img">
-                                    <a class="entry-thumb" href="{{ route('tour') }}">
-                                        <img src="{{ asset('theme/images/categories/gastro.jpeg') }}" alt=""/>
-                                    </a>
-                                    <a class="entry-category blue" href="{{ route('category') }}">
-                                        <i class="las la-utensils"></i><span>Гастро тур</span>
-                                    </a>
-                                </div>
-
-                                <div class="entry-detail">
-                                    <div class="entry-head">
-                                        <div class="place-type list-item">
-                                            <span>Гастро тур</span>
-                                        </div>
-                                        <div class="place-city">
-                                            Рим
-                                        </div>
-                                    </div>
-                                    <h3 class="place-title"><a href="{{ route('tour') }}">Гастро тур "Мамамия"</a></h3>
-                                    <small class="mb-3" style="display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;">Помимо десятков видов паст, пицц и лазаний, в кухне Риме Вас ждут телячьи эскалопы с ветчиной сальтимбокка — в переводе: прыгай в рот, восхитительная  жареная  ягнятина с розмарином и тимьяном аббакьоалла романа. На гарнир традиционно подают рис, горох, спаржу и артишоки.</small>
-                                    <div class="entry-bottom">
-                                        <div class="place-preview">
-                                            19.08.2021 - 20.09.2021
-                                        </div>
-                                        <div class="place-price">
-                                            <span>$$</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="place-item layout-02 place-hover">
-                            <div class="place-inner">
-                                <div class="place-thumb hover-img">
-                                    <a class="entry-thumb" href="{{ route('tour') }}">
-                                        <img src="{{ asset('theme/images/categories/bali.jpeg') }}" alt=""/>
-                                    </a>
-                                    <a class="entry-category rosy-pink" href="{{ route('category') }}">
-                                        <i class="las la-sun"></i><span>Пляжный тур</span>
-                                    </a>
-                                </div>
-
-                                <div class="entry-detail">
-                                    <div class="entry-head">
-                                        <div class="place-type list-item">
-                                            <span>Пляжный тур</span>
-                                        </div>
-                                        <div class="place-city">
-                                            Одесса
-                                        </div>
-                                    </div>
-                                    <h3 class="place-title"><a href="{{ route('tour') }}">Пляжный тур "Ибица"</a></h3>
-                                    <small class="mb-3" style="display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;">Ибица – самый модный курорт Европы. Солнце, море, свобода, круглосуточное веселье, переходящее в «отрыв».</small>
-                                    <div class="entry-bottom">
-                                        <div class="place-preview">
-                                            1.05.2021 - 31.09.2021
-                                        </div>
-                                        <div class="place-price">
-                                            <span>$$$</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="place-item layout-02 place-hover">
-                                <div class="place-inner">
-                                    <div class="place-thumb hover-img">
-                                        <a class="entry-thumb" href="{{ route('tour') }}">
-                                            <img src="{{ asset('theme/images/categories/spa.jpeg') }}" alt=""/>
-                                        </a>
-                                        <a class="entry-category purple" href="{{ route('category') }}">
-                                            <i class="las la-spa"></i><span>Релакс тур</span>
-                                        </a>
-                                    </div>
-
-                                    <div class="entry-detail">
-                                        <div class="entry-head">
-                                            <div class="place-type list-item">
-                                                <span>Релакс тур</span>
-                                            </div>
-                                            <div class="place-city">
-                                                Мармарис
-                                            </div>
-                                        </div>
-                                        <h3 class="place-title"><a href="{{ route('tour') }}">Релакс тур "Насолода"</a></h3>
-                                        <small class="mb-3" style="display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;">Позвольте себе забыть о ежедневной рутине и окунуться в атмосферу релакса. Незабываемый отдых в загородном комплексе в сосновом лесу с оздоровительными SPA-программами.</small>
-                                        <div class="entry-bottom">
-                                            <div class="place-preview">
-                                                31.02.2021 - 31.12.2021
-                                            </div>
-                                            <div class="place-price">
-                                                <span>$$$</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                        @endfor
-
+                        @foreach($tours as $tour)
+                            @include('utils.tour_item', $tour)
+                        @endforeach
                     </div>
                     <div class="place-slider__nav slick-nav">
                         <div class="place-slider__prev slick-nav__prev">
                             <i class="las la-angle-left"></i>
-                        </div><!-- .place-slider__prev -->
+                        </div>
                         <div class="place-slider__next slick-nav__next">
                             <i class="las la-angle-right"></i>
-                        </div><!-- .place-slider__next -->
-                    </div><!-- .place-slider__nav -->
-                </div>
+                        </div>
+                    </div>
+                </div>å
             </div>
         </div>
 

@@ -118,6 +118,8 @@ return [
     'big_image' => 'Большая картинка',
     'image_help' => 'Желательный размер изображения - :width x :height. Так же делательно перед загрузкой <a href="https://imagecompressor.com" target="_blank">оптимизировать изображение.</a>',
 
+    'tours' => 'Туры',
+
     'countries' => 'Страны',
     'slogan' => 'Слоган',
     'currency' => 'Валюта',
