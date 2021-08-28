@@ -17,10 +17,17 @@ class CountryController extends Controller
      */
     public function index(Country $country): View
     {
+        $countries = Country::query()
+            ->whereKeyNot($country->getKey())
+            ->withCount('hotels')
+            ->inRandomOrder()
+            ->limit(4)
+            ->get();
+
         return view('country', [
             'country' => $country,
             'hotels' => $country->hotels()->paginate(),
-            'countries' => Country::query()->whereKeyNot($country->getKey())->inRandomOrder()->limit(4)->get(),
+            'countries' => $countries,
         ]);
     }
 }
