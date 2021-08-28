@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tour;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
@@ -18,5 +19,18 @@ class Controller extends BaseController
     public function agents(): View
     {
         return view('agents');
+    }
+
+    /**
+     * @return View
+     */
+    public function tours(): View
+    {
+        $hotTours = Tour::query()->where('hot', 1)->visible()->limit(2)->get();
+        $tours = Tour::query()->visible()->paginate();
+        return view('tours', [
+            'hotTours' => $hotTours,
+            'tours' => $tours,
+        ]);
     }
 }
