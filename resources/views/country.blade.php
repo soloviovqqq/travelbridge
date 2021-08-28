@@ -57,16 +57,7 @@
                             @include('utils.hotel_item', $hotel)
                         @endforeach
                     </div>
-                    <div class="pagination">
-                        <div class="pagination__numbers">
-                            <span>1</span>
-                            <a title="2" href="#">2</a>
-                            <a title="3" href="#">3</a>
-                            <a title="Next" href="#">
-                                <i class="la la-angle-right"></i>
-                            </a>
-                        </div>
-                    </div>
+                    {{ $hotels->links("pagination::bootstrap-4") }}
                 </div>
             </div>
         </div>
