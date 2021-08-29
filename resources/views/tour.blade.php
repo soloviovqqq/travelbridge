@@ -15,8 +15,8 @@
                 <div class="slick-slider" data-item="1"  data-itemScroll="1" data-dots="false" data-infinite="false" data-centerMode="false" data-centerPadding="0">
                     @foreach($tour->images as $image)
                         <div class="place-slider__item">
-                            <a class="venobox" href="{{ \Illuminate\Support\Facades\Storage::url($image['image']) }}" data-gall="pls_slider">
-                                <img src="{{ \Illuminate\Support\Facades\Storage::url($image['image']) }}" alt="slider-01">
+                            <a class="venobox" href="{{ \Illuminate\Support\Facades\Storage::url($image) }}" data-gall="pls_slider">
+                                <img src="{{ \Illuminate\Support\Facades\Storage::url($image) }}" alt="slider-01">
                             </a>
                         </div>
                     @endforeach

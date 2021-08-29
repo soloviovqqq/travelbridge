@@ -15,7 +15,7 @@ class AddImagesColumnToHotelsTable extends Migration
     public function up(): void
     {
         Schema::table('hotels', function (Blueprint $table) {
-            $table->json('images')->after('small_image')->nullable();
+            $table->text('images')->after('small_image')->nullable();
         });
     }
 
