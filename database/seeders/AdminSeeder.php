@@ -59,6 +59,13 @@ class AdminSeeder extends Seeder
         ]);
         $menuModel::query()->create([
             'parent_id' => 0,
+            'order' => 0,
+            'title' => 'admin.group_tours',
+            'icon' => 'fa-plane',
+            'uri' => '/group-tours'
+        ]);
+        $menuModel::query()->create([
+            'parent_id' => 0,
             'order' => 1,
             'title' => 'admin.countries',
             'icon' => 'fa-globe',

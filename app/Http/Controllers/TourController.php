@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GroupTour;
 use App\Models\Tour;
 use Illuminate\Contracts\View\View;
 
@@ -27,6 +28,23 @@ class TourController extends Controller
         return view('tour', [
             'tour' => $tour,
             'tours' => $tours,
+        ]);
+    }
+
+    public function groupTours()
+    {
+        dd(123);
+    }
+
+    /**
+     * @param GroupTour $groupTour
+     * @return View
+     */
+    public function groupTour(GroupTour $groupTour): View
+    {
+        return view('group-tour', [
+            'groupTour' => $groupTour,
+            'tours' => $groupTour->tours()->visible()->paginate(),
         ]);
     }
 }

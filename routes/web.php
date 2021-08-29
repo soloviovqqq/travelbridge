@@ -35,15 +35,13 @@ Route::get('/', function () {
     ]);
 })->name('home');
 
-Route::get('/tours-group', function () {
-    return view('tours-group');
-})->name('tours-group');
-
 Route::get('/agents', [Controller::class, 'agents'])->name('agents');
 Route::get('/tours', [Controller::class, 'tours'])->name('tours');
 
 Route::get('/tour-type/{tourType}', [TourTypeController::class, 'index'])->name('tour-type');
 Route::get('/tour/{tour}', [TourController::class, 'index'])->name('tour');
+Route::get('/group-tours', [TourController::class, 'groupTours'])->name('group-tours');
+Route::get('/group-tour/{groupTour}', [TourController::class, 'groupTour'])->name('group-tour');
 
 Route::get('/country/{country}', [CountryController::class, 'index'])->name('country');
 Route::get('/hotel/{hotel}', [HotelController::class, 'index'])->name('hotel');
