@@ -65,7 +65,7 @@ class Hotel extends Model
      * @var array
      */
     protected $casts = [
-        'additional_info' =>'json',
+        'images' =>'json',
         'faq' =>'json',
         'amenities' =>'json',
     ];
