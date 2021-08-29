@@ -26,8 +26,18 @@ class Controller extends BaseController
      */
     public function tours(): View
     {
-        $hotTours = Tour::query()->where('hot', 1)->visible()->limit(2)->get();
-        $tours = Tour::query()->visible()->paginate();
+        $hotTours = Tour::query()
+            ->where('type', Tour::PUBLIC_TYPE)
+            ->where('hot', 1)
+            ->visible()
+            ->limit(2)
+            ->get();
+
+        $tours = Tour::query()
+            ->where('type', Tour::PUBLIC_TYPE)
+            ->visible()
+            ->paginate();
+
         return view('tours', [
             'hotTours' => $hotTours,
             'tours' => $tours,
