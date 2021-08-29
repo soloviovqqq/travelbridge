@@ -77,7 +77,7 @@ class HotelController extends AdminController
                 $table->textarea('text', __('admin.texts'));
             });
         })->tab(__('admin.images'), function (Form $form) {
-            $form->multipleImage('images', __('admin.images'))->removable();
+            $form->multipleImage('images', __('admin.images'))->help(__('admin.image_help', ['width' => 1440, 'height' => 400]))->uniqueName()->removable();
         })->tab(__('admin.faqs'), function (Form $form) {
             $form->table('faq', __('admin.faqs'), function ($table) {
                 $table->text('question', __('admin.question'));
