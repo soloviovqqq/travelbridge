@@ -74,6 +74,11 @@ class TourController extends AdminController
             $form->text('info_medical', __('admin.info_medical'));
             $form->text('info_kids', __('admin.info_kids'));
             $form->text('info_price', __('admin.info_price'));
+
+            $form->table('additional_info', __('admin.additional_info'), function ($table) {
+                $table->text('title', __('admin.title'));
+                $table->textarea('text', __('admin.texts'));
+            });
         })->tab(__('admin.images'), function (Form $form) {
             $form->multipleImage('images', __('admin.images'))->removable();
         })->tab(__('admin.schedule'), function (Form $form) {

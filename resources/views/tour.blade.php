@@ -122,6 +122,13 @@
                         <div class="sidebar sidebar-shadow sidebar-sticky">
                             <aside class="widget-sb-detail">
                                 <div class="business-info">
+                                    @if($tour->additional_info)
+                                        @foreach($tour->additional_info as $additionalInfo)
+                                            <h3 class="text-center mb-2">{{ $additionalInfo['title'] }}</h3>
+                                            <p>{{ $additionalInfo['text'] }}</p>
+                                            <hr>
+                                        @endforeach
+                                    @endif
                                     <h3 class="text-center mb-4">Краткая информация</h3>
                                     <ul>
                                         @if($tour->info_dates)
@@ -166,7 +173,7 @@
                                         <p>Свяжитесь с нами:</p>
                                         <div class="button-wrap mt-2">
                                             <div class="button"><a href="#" class="btn">Позвонить</a></div>
-                                            <div class="button"><a href="#" class="btn btn-border">Написать</a></div>
+                                            <div class="button"><a href="https://t.me/travelbridge" class="btn btn-border" target="_blank">Написать</a></div>
                                         </div>
                                     </div>
                                 </div>

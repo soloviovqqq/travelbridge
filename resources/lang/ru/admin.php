@@ -142,6 +142,7 @@ return [
     'info_medical' => 'Медецинская информация',
     'info_kids' => 'Информация о детях',
     'info_price' => 'Стоимость',
+    'additional_info' => 'Дополнительная информация',
 
     'countries' => 'Страны',
     'country' => 'Страна',

@@ -118,7 +118,7 @@ class Hotel extends Model
      * @param $value
      * @return array
      */
-    public function getImagesAttribute($value): array
+    public function getAdditionalInfoAttribute($value): array
     {
         return array_values(json_decode($value, true) ?: []);
     }
@@ -126,9 +126,9 @@ class Hotel extends Model
     /**
      * @param $value
      */
-    public function setImagesAttribute($value): void
+    public function setAdditionalInfoAttribute($value): void
     {
-        $this->attributes['images'] = json_encode(array_values($value));
+        $this->attributes['additional_info'] = json_encode(array_values($value));
     }
 
     /**
