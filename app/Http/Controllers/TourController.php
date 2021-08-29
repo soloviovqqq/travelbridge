@@ -31,11 +31,6 @@ class TourController extends Controller
         ]);
     }
 
-    public function groupTours()
-    {
-        dd(123);
-    }
-
     /**
      * @param GroupTour $groupTour
      * @return View

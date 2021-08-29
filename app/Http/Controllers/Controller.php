@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\GroupTour;
 use App\Models\Tour;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -41,6 +42,28 @@ class Controller extends BaseController
         return view('tours', [
             'hotTours' => $hotTours,
             'tours' => $tours,
+        ]);
+    }
+
+    /**
+     * @return View
+     */
+    public function groupTours(): View
+    {
+        $hotTours = Tour::query()
+            ->where('type', Tour::GROUP_TYPE)
+            ->where('hot', 1)
+            ->visible()
+            ->limit(2)
+            ->get();
+
+        $groupTours = GroupTour::query()
+            ->visible()
+            ->paginate();
+
+        return view('group-tours', [
+            'groupTours' => $groupTours,
+            'hotTours' => $hotTours,
         ]);
     }
 }
