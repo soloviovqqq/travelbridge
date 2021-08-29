@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Storage;
  */
 class Tour extends Model
 {
+    public const PUBLIC_TYPE = 0;
+    public const GROUP_TYPE = 1;
+
     /**
      * @var int
      */

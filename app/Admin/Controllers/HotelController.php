@@ -62,7 +62,7 @@ class HotelController extends AdminController
             $form->textarea('description', __('admin.description'))->required();
             $form->url('video_link', __('admin.video_link'));
             $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 540, 'height' => 500]))->uniqueName()->required();
-            $form->multipleSelect('amenities')->options($this->getAmenities());
+            $form->multipleSelect('amenities', __('admin.amenities'))->options($this->getAmenities());
             $form->switch('visible', __('admin.show'))->default(1);
             $form->number('order', __('admin.order'))->default(0);
         })->tab(__('admin.info_block'), function (Form $form) {

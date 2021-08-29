@@ -54,10 +54,12 @@ class TourController extends AdminController
 
         $form->tab( __('admin.main_info'), function (Form $form) {
             $form->select('tour_type_id', __('admin.tour_type'))->options($this->getTourTypes())->required();
+            $form->radio('type', __('admin.type'))->options([Tour::PUBLIC_TYPE => __('admin.public_type'), Tour::GROUP_TYPE => __('admin.group_type')]);
             $form->text('title',  __('admin.title'))->required();
             $form->hidden('alias')->required();
             $form->text('place', __('admin.place'))->required();
             $form->number('symbol_price', __('admin.symbol_price'))->default(2)->min(1)->max(4);
+            $form->text('dates', __('admin.dates'))->required();
             $form->textarea('small_description', __('admin.small_description'))->required();
             $form->textarea('description', __('admin.description'))->required();
             $form->url('video_link', __('admin.video_link'));
