@@ -58,6 +58,9 @@
                                     <div class="place__category">
                                         <a>{{ $tour->place }}</a>
                                     </div>
+                                    <div class="place__category">
+                                        <a>{{ $tour->dates }}</a>
+                                    </div>
                                 </div>
                             </div>
 

@@ -22,7 +22,7 @@
             <small class="mb-3" style="display: -webkit-box;-webkit-line-clamp: 4;-webkit-box-orient: vertical;overflow: hidden;">{{ $tour->small_description }}</small>
             <div class="entry-bottom">
                 <div class="place-preview">
-                    19.08.2021 - 20.09.2021
+                    {{ $tour->dates }}
                 </div>
                 <div class="place-price">
                     <span>
