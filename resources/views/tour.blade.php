@@ -90,7 +90,7 @@
 
                             @if($tour->program)
                                 <div class="place__box">
-                                    <h3>Программа тура:</h3>
+                                    <h3>Программа тура</h3>
                                     <ul class="faqs-accordion">
                                         @foreach($tour->program as $program)
                                             <li>
