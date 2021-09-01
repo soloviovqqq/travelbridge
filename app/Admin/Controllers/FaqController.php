@@ -56,7 +56,7 @@ class FaqController extends AdminController
     {
         $form = new Form(new Faq());
         $form->text('question', __('admin.question'))->required();
-        $form->textarea('answer', __('admin.answer'))->required();
+        $form->ckeditor('answer', __('admin.answer'))->required();
         $form->switch('visible', __('admin.show'))->default(1);
         $form->number('order', __('admin.order'))->default(0);
         $form->disableReset();

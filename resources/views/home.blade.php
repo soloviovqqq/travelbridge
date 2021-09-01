@@ -101,7 +101,7 @@
                         <div class="col-md-6">
                             <div class="asked-item">
                                 <h3>{{ $faq->question }}</h3>
-                                <p>{{ $faq->answer }}</p>
+                                <p>{!!  $faq->answer !!}</p>
                             </div>
                         </div>
                     @endforeach
@@ -121,7 +121,7 @@
                                     <img src="{{ asset('theme/images/assets/quote-active.png') }}" alt="Quote" class="quote">
                                 </div>
                                 <div class="testimonial-info">
-                                    <p>{{ $review->text }}</p>
+                                    <p>{!! $review->text !!}</p>
                                     <div class="testimonial-meta">
                                         <b>{{ $review->name }}</b>
                                     </div>
