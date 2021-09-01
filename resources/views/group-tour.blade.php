@@ -29,7 +29,7 @@
                             <div class="place__box place__box-overview">
                                 <h3>Описание</h3>
                                 <div class="place__desc">
-                                    {{ $groupTour->description }}
+                                    {!! $groupTour->description !!}
                                 </div>
                                 <a href="#" class="show-more">Подробнее...</a>
                             </div>
@@ -41,7 +41,7 @@
                                         @foreach($groupTour->faq as $faq)
                                             <li>
                                                 <h4>{{ $faq['question'] }}</h4>
-                                                <div class="desc"><p>{{ $faq['answer'] }}</p></div>
+                                                <div class="desc"><p>{!! nl2br(e($faq['answer'])) !!}</p></div>
                                             </li>
                                         @endforeach
                                     </ul>
