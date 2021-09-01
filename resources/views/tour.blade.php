@@ -66,7 +66,7 @@
 
                             <div class="place__box-overview">
                                 <div class="place__desc">
-                                    <a>{{ $tour->description }}</a>
+                                    <a>{!! $tour->description  !!}</a>
                                 </div>
                                 <a href="#" class="show-more">Подробнее...</a>
                             </div>
@@ -95,7 +95,7 @@
                                         @foreach($tour->program as $program)
                                             <li>
                                                 <h4>{{ $program['title'] }}</h4>
-                                                <div class="desc"><p>{{ $program['description'] }}</p></div>
+                                                <div class="desc"><p>{!! nl2br(e($program['description'])) !!}</p></div>
                                             </li>
                                         @endforeach
                                     </ul>
@@ -109,7 +109,7 @@
                                         @foreach($tour->faq as $faq)
                                             <li>
                                                 <h4>{{ $faq['question'] }}</h4>
-                                                <div class="desc"><p>{{ $faq['answer'] }}</p></div>
+                                                <div class="desc"><p>{!! nl2br(e($faq['answer'])) !!}</p></div>
                                             </li>
                                         @endforeach
                                     </ul>

@@ -61,7 +61,7 @@ class TourController extends AdminController
             $form->number('symbol_price', __('admin.symbol_price'))->default(2)->min(1)->max(4);
             $form->text('dates', __('admin.dates'))->required();
             $form->textarea('small_description', __('admin.small_description'))->required();
-            $form->textarea('description', __('admin.description'))->required();
+            $form->ckeditor('description', __('admin.description'))->required();
             $form->url('video_link', __('admin.video_link'));
             $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 500, 'height' => 420]))->uniqueName()->required();
             $form->switch('hot', __('admin.hot'))->default(0);
@@ -89,13 +89,13 @@ class TourController extends AdminController
             });
         })->tab(__('admin.program'), function (Form $form) {
             $form->table('program', __('admin.program'), function ($table) {
-                $table->text('title', __('admin.title'));
-                $table->textarea('description', __('admin.description'));
+                $table->text('title', __('admin.title'))->required();
+                $table->textarea('description', __('admin.description'))->required();
             });
         })->tab(__('admin.faqs'), function (Form $form) {
             $form->table('faq', __('admin.faqs'), function ($table) {
-                $table->text('question', __('admin.question'));
-                $table->textarea('answer', __('admin.answer'));
+                $table->text('question', __('admin.question'))->required();
+                $table->textarea('answer', __('admin.answer'))->required();
             });
         });
         $form->disableReset();

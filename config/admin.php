@@ -405,6 +405,11 @@ return [
     |
     */
     'extensions' => [
-
+        'ckeditor' => [
+            'enable' => true,
+            'config' => [
+                'lang' => 'ru',
+            ]
+        ]
     ],
 ];
