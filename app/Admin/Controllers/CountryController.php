@@ -53,7 +53,7 @@ class CountryController extends AdminController
         $form->text('title',  __('admin.title'))->required();
         $form->hidden('alias')->required();
         $form->text('slogan',  __('admin.slogan'));
-        $form->textarea('description',  __('admin.description'))->required();
+        $form->ckeditor('description',  __('admin.description'))->required();
         $form->text('currency',  __('admin.currency'))->required();
         $form->text('languages',  __('admin.languages'))->required();
         $form->image('small_image',  __('admin.small_image'))->help(__('admin.image_help', ['width' => 540, 'height' => 720]))->uniqueName()->required();

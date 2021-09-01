@@ -17,7 +17,7 @@
                 <div class="intro__content">
                     <div class="row">
                         <div class="col-lg-6">
-                            <div class="intro__text">{{ $country->description }}</div>
+                            <div class="intro__text">{!! $country->description !!}</div>
                         </div>
                         <div class="col-lg-6">
                             <div class="intro__meta">
