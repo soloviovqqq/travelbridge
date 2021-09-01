@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home', [
-        'tourTypes' => TourType::query()->visible()->get(),
+        'tourTypes' => TourType::query()->withCount('tours')->visible()->get(),
         'tours' => Tour::query()->with('tourType')->visible()->limit(12)->get(),
         'countries' => Country::query()->withCount('hotels')->visible()->get(),
         'faqs' => Faq::query()->visible()->get(),

@@ -103,7 +103,7 @@
                                 <div class="place__desc">
                                     {{ $hotel->description }}
                                 </div>
-                                <a href="#" class="show-more" title="Show More">Подробнее...</a>
+                                <a href="#" class="show-more">Подробнее...</a>
                             </div>
 
                             @if($hotel->faq)

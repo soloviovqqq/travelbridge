@@ -31,7 +31,7 @@
                                 <div class="place__desc">
                                     {{ $groupTour->description }}
                                 </div>
-                                <a href="#" class="show-more" title="Show More">Show more</a>
+                                <a href="#" class="show-more">Подробнее...</a>
                             </div>
 
                             @if($groupTour->faq)

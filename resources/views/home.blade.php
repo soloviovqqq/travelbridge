@@ -26,7 +26,7 @@
                                     </div>
                                     <div class="explore-info">
                                         <h3><a href="{{ route('tour-type', $tourType) }}">{{ $tourType->title }}</a></h3>
-                                        <span>{{ rand(1, 20) }} туров</span>
+                                        <span>{{ $tourType->tours_count }} туров</span>
                                     </div>
                                 </a>
                             </div>

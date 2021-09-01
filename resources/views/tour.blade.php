@@ -68,7 +68,7 @@
                                 <div class="place__desc">
                                     <a>{{ $tour->description }}</a>
                                 </div>
-                                <a href="#" class="show-more" title="Show More">Подробнее...</a>
+                                <a href="#" class="show-more">Подробнее...</a>
                             </div>
 
                             @if($tour->schedule)
