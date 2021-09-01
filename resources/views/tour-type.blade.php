@@ -13,7 +13,7 @@
                         <div class="entry-content">
                             <h1 class="mb-4">{{ $tourType->title }}</h1>
                             <div class="entry-desc">
-                                <p>{{ $tourType->description }}</p>
+                                <p>{!! $tourType->description !!}</p>
                             </div>
                         </div>
                     </div>
