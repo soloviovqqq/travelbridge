@@ -20,7 +20,7 @@ class GalleryController extends AdminController
      */
     protected function title()
     {
-        return __('admin.iamges');
+        return __('admin.images');
     }
 
     /**
@@ -50,7 +50,7 @@ class GalleryController extends AdminController
     protected function form()
     {
         $form = new Form(new MainInfo());
-        $form->multipleImage('gallery', __('admin.images'))->required();
+        $form->multipleImage('gallery', __('admin.images'))->removable()->required();
         $form->disableReset();
         $form->disableViewCheck();
         $form->disableCreatingCheck();
