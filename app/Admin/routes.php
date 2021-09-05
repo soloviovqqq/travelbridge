@@ -21,4 +21,5 @@ Route::group([
     $router->resource('reviews', 'ReviewController');
     $router->resource('faqs', 'FaqController');
     $router->resource('contact-messages', 'ContactMessageController');
+    $router->resource('files', 'FilesController');
 });

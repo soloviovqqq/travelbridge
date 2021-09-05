@@ -99,5 +99,12 @@ class AdminSeeder extends Seeder
             'icon' => 'fa-envelope',
             'uri' => '/contact-messages'
         ]);
+        $menuModel::query()->create([
+            'parent_id' => 0,
+            'order' => 5,
+            'title' => 'admin.files',
+            'icon' => ' fa-files-o',
+            'uri' => '/files'
+        ]);
     }
 }
