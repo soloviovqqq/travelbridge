@@ -23,4 +23,5 @@ Route::group([
     $router->resource('contact-messages', 'ContactMessageController');
     $router->resource('files', 'FilesController');
     $router->resource('agency-text', 'AgencyTextController');
+    $router->resource('exchange-rates', 'ExchangeRatesController');
 });

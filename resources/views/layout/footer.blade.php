@@ -6,10 +6,10 @@
                     <aside class="footer__top__nav">
                         <h3><a href="{{ route('home') }}">Главная</a></h3>
                         <ul>
-                            <li><a title="About Us" href="#">Соединенные Штаты</a></li>
-                            <li><a title="Blog" href="#">Испания</a></li>
-                            <li><a title="Faqs" href="#">Нидерланды</a></li>
-                            <li><a title="Contact" href="#">Япония</a></li>
+                            <li>Курс валют</li>
+                            @foreach(\App\Models\ExchangeRate::query()->limit(3)->get() as $exchangeRate)
+                                <li>{{ $exchangeRate->pair }} {{ $exchangeRate->rate }}</li>
+                            @endforeach
                         </ul>
                     </aside>
                 </div>

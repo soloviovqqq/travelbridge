@@ -115,8 +115,15 @@ class AdminSeeder extends Seeder
             'parent_id' => 0,
             'order' => 6,
             'title' => 'admin.files',
-            'icon' => ' fa-files-o',
+            'icon' => 'fa-files-o',
             'uri' => '/files'
+        ]);
+        $menuModel::query()->create([
+            'parent_id' => 0,
+            'order' => 7,
+            'title' => 'admin.exchange_rates',
+            'icon' => 'fa-money',
+            'uri' => '/exchange-rates'
         ]);
     }
 }

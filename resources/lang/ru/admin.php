@@ -172,4 +172,8 @@ return [
     'file' => 'Файл',
 
     'agency_text' => 'Агентам',
+
+    'exchange_rates' => 'Курс валют',
+    'pair' => 'Пара',
+    'rate' => 'Курс',
 ];
