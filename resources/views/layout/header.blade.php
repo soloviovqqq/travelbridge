@@ -37,6 +37,9 @@
                                             <a href="{{ route('agents') }}" title="Агентам">Агентам</a>
                                         </li>
                                         <li>
+                                            <a href="{{ route('about') }}" title="Контакты">О компании</a>
+                                        </li>
+                                        <li>
                                             <a href="{{ route('contact') }}" title="Контакты">Контакты</a>
                                         </li>
                                     </ul>
@@ -61,6 +64,9 @@
                             </li>
                             <li>
                                 <a href="{{ route('agents') }}" title="Агентам">Агентам</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('about') }}" title="Контакты">О компании</a>
                             </li>
                             <li>
                                 <a href="{{ route('contact') }}" title="Контакты">Контакты</a>
