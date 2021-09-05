@@ -15,7 +15,7 @@ CKEDITOR.editorConfig = function( config ) {
         { name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
         { name: 'links' },
 		// { name: 'paragraph',   groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ] },
-		// { name: 'styles' },
+		{ name: 'styles' },
 		// { name: 'colors' },
 		// { name: 'about' }
 	];

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\GroupTour;
+use App\Models\MainInfo;
 use App\Models\Tour;
 use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
@@ -19,7 +20,9 @@ class Controller extends BaseController
      */
     public function agents(): View
     {
-        return view('agents');
+        return view('agents', [
+            'agency_text' => MainInfo::query()->first()->agency_text,
+        ]);
     }
 
     /**

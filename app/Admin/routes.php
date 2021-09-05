@@ -22,4 +22,5 @@ Route::group([
     $router->resource('faqs', 'FaqController');
     $router->resource('contact-messages', 'ContactMessageController');
     $router->resource('files', 'FilesController');
+    $router->resource('agency-text', 'AgencyTextController');
 });
