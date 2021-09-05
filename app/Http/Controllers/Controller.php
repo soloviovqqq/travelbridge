@@ -69,4 +69,9 @@ class Controller extends BaseController
             'hotTours' => $hotTours,
         ]);
     }
+
+    public function about()
+    {
+        return view('about');
+    }
 }

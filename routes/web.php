@@ -39,6 +39,7 @@ Route::get('/', function () {
 
 Route::get('/agents', [Controller::class, 'agents'])->name('agents');
 Route::get('/tours', [Controller::class, 'tours'])->name('tours');
+Route::get('/about', [Controller::class, 'about'])->name('about');
 
 Route::get('/tour-type/{tourType}', [TourTypeController::class, 'index'])->name('tour-type');
 Route::get('/tour/{tour}', [TourController::class, 'index'])->name('tour');

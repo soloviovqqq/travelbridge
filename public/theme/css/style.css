@@ -1225,7 +1225,6 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 
 .company-info { display: -webkit-box; display: -ms-flexbox; display: flex; align-items: center; }
 .company-info > img { -webkit-box-flex: 0; -ms-flex: 0 0 570px; flex: 0 0 570px; max-width: 570px; }
-.company-info .ci-content { padding: 0 60px; }
 .company-info .ci-content span { font-family: "Jost-Book"; font-size: 16px; line-height: 23px; color: #5d5d5d; margin-bottom: 10px; }
 .company-info .ci-content h2 { font-family: "Jost"; font-size: 28px; color: #2d2d2d; font-weight: 500; margin-bottom: 30px; line-height: 39px; }
 .company-info .ci-content p { font-size: 16px; line-height: 23px; margin-bottom: 15px; }
@@ -1557,6 +1556,9 @@ a.place__comments__reply i { display: inline-block; vertical-align: middle; marg
 .explore-item span { font-family: Jost; font-size: 16px; color: #ffffff; line-height: 1.5; font-weight: 300; }
 .explore-item .explore-thumb { position: relative; border-radius: 15px; -moz-border-radius: 15px; -webkit-border-radius: 15px; -ms-border-radius: 15px; -o-border-radius: 15px; -webkit-backface-visibility: hidden; -moz-backface-visibility: hidden; -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); overflow: hidden; }
 .explore-item .explore-thumb:before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; }
+.partners .cities__thumb img { width: auto; height: 68px!important;}
+.partners .slick-nav > div {top: 10%; left: 0;}
+.partners  .slick-nav .slick-nav__next {right: 0px; left: auto;}
 
 .explore-item.dark-sky-blue .explore-thumb:before { background-color: rgba(0, 0, 0, 0.4); }
 
