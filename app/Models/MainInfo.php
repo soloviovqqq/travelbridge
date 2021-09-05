@@ -10,4 +10,10 @@ use Illuminate\Database\Eloquent\Model;
  */
 class MainInfo extends Model
 {
+    /**
+     * @var array
+     */
+    protected $casts = [
+        'gallery' => 'json',
+    ];
 }

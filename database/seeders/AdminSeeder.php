@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\MainInfo;
 use Encore\Admin\Auth\Database\Administrator;
 use Encore\Admin\Auth\Database\AdminTablesSeeder;
 use Illuminate\Database\Seeder;
@@ -19,10 +18,6 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
-        MainInfo::query()->firstOrCreate([
-            'agency_text' => '',
-            'gallery' => '[]',
-        ]);
         $this->call(AdminTablesSeeder::class);
         $this->updateAdmin();
         $this->createMenu();
@@ -114,13 +109,20 @@ class AdminSeeder extends Seeder
         $menuModel::query()->create([
             'parent_id' => 0,
             'order' => 6,
+            'title' => 'admin.images',
+            'icon' => 'fa-picture-o',
+            'uri' => '/gallery'
+        ]);
+        $menuModel::query()->create([
+            'parent_id' => 0,
+            'order' => 7,
             'title' => 'admin.files',
             'icon' => 'fa-files-o',
             'uri' => '/files'
         ]);
         $menuModel::query()->create([
             'parent_id' => 0,
-            'order' => 7,
+            'order' => 8,
             'title' => 'admin.exchange_rates',
             'icon' => 'fa-money',
             'uri' => '/exchange-rates'

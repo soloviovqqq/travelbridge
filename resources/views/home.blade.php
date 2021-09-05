@@ -140,7 +140,25 @@
             </div>
         </div>
 
-        <div class="frequently-asked" id="contact-form">
+        <div class="frequently-asked">
+            <div class="container">
+                <div class="title">
+                    <h2>Фотогалерея</h2>
+                </div>
+
+                <div class="row text-center text-lg-start">
+                    @foreach($gallery as $image)
+                        <div class="col-lg-3 col-md-4 col-6">
+                            <a href="{{ \Illuminate\Support\Facades\Storage::url($image) }}" class="d-block mb-4 h-100 venobox" data-gall="pls_slider">
+                                <img class="img-fluid img-thumbnail" src="{{ \Illuminate\Support\Facades\Storage::url($image) }}" alt="">
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+        <div id="contact-form" style="padding: 55px 0;">
             <div class="container">
                 <h2 class="title title-border-bottom align-center offset-item animate">Наши контакты</h2>
                 <div class="row">

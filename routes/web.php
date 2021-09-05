@@ -8,6 +8,7 @@ use App\Http\Controllers\TourController;
 use App\Http\Controllers\TourTypeController;
 use App\Models\Country;
 use App\Models\Faq;
+use App\Models\MainInfo;
 use App\Models\Review;
 use App\Models\Tour;
 use App\Models\TourType;
@@ -31,6 +32,7 @@ Route::get('/', function () {
         'countries' => Country::query()->withCount('hotels')->visible()->get(),
         'faqs' => Faq::query()->visible()->get(),
         'reviews' => Review::query()->visible()->get(),
+        'gallery' => MainInfo::query()->first()->gallery,
         'transparentHeader' => true,
     ]);
 })->name('home');

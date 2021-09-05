@@ -21,6 +21,7 @@ Route::group([
     $router->resource('reviews', 'ReviewController');
     $router->resource('faqs', 'FaqController');
     $router->resource('contact-messages', 'ContactMessageController');
+    $router->resource('gallery', 'GalleryController');
     $router->resource('files', 'FilesController');
     $router->resource('agency-text', 'AgencyTextController');
     $router->resource('exchange-rates', 'ExchangeRatesController');

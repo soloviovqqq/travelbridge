@@ -17,7 +17,7 @@ class CreateMainInfosTable extends Migration
         Schema::create('main_infos', function (Blueprint $table) {
             $table->id();
             $table->text('agency_text');
-            $table->json('gallery');
+            $table->json('gallery')->nullable();
             $table->timestamps();
         });
     }
