@@ -7,7 +7,6 @@
             <div class="container">
                 <div class="site-banner__content">
                     <h1 class="site-banner__title"> Travel Bridge ваш проводник в мир путешествий</h1>
-                    <p><i>20</i> стран, <i>15466</i> клиентов.</p>
                 </div>
             </div>
         </div>
