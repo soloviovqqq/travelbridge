@@ -21,6 +21,6 @@ class File extends Model
      */
     public function getFileLinkAttribute(): string
     {
-        return Storage::url($this->file);
+        return url(Storage::url($this->file));
     }
 }
