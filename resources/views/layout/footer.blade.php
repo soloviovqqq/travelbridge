@@ -6,57 +6,40 @@
                     <aside class="footer__top__nav">
                         <h3><a href="{{ route('home') }}">Главная</a></h3>
                         <ul>
-                            <li>Курс валют</li>
-                            @foreach(\App\Models\ExchangeRate::query()->limit(3)->get() as $exchangeRate)
-                                <li>{{ $exchangeRate->pair }} {{ $exchangeRate->rate }}</li>
+                            @foreach(\App\Models\Country::query()->visible()->limit(3)->get() as $country)
+                                <li><a href="{{ route('country', $country) }}">{{ $country->title }}</a></li>
                             @endforeach
                         </ul>
                     </aside>
                 </div>
                 <div class="col-lg-3">
                     <aside class="footer__top__nav">
-                        <h3> Операторские туры</h3>
+                        <h3><a href="{{ route('group-tours') }}">Операторские туры</a></h3>
                         <ul>
-                            <li><a title="About Us" href="#">Гастро тур "Мамамия"</a></li>
-                            <li><a title="Blog" href="#">Пляжный тур "Ибица"</a></li>
-                            <li><a title="Faqs" href="#">Релакс тур "Насолода"</a></li>
-                            <li><a title="Contact" href="#">Гастро тур "Мамамия"</a></li>
+                            @foreach(\App\Models\GroupTour::query()->visible()->limit(3)->get() as $groupTour)
+                                <li><a href="{{ route('group-tour', $groupTour) }}">{{ $groupTour->title }}</a></li>
+                            @endforeach
                         </ul>
                     </aside>
                 </div>
                 <div class="col-lg-3">
                     <aside class="footer__top__nav">
-                        <h3>Рекламные туры</h3>
+                        <h3><a href="{{ route('tours') }}">Рекламные туры</a></h3>
                         <ul>
-                            <li><a title="About Us" href="#">Гастро тур "Мамамия"</a></li>
-                            <li><a title="Blog" href="#">Пляжный тур "Ибица"</a></li>
-                            <li><a title="Faqs" href="#">Релакс тур "Насолода"</a></li>
-                            <li><a title="Contact" href="#">Гастро тур "Мамамия"</a></li>
+                            @foreach(\App\Models\Tour::query()->public()->visible()->limit(3)->get() as $tour)
+                                <li><a href="{{ route('tour', $tour) }}">{{ $tour->title }}</a></li>
+                            @endforeach
                         </ul>
                     </aside>
                 </div>
                 <div class="col-lg-3">
-                    <aside class="footer__top__nav footer__top__nav--contact">
+                    <aside class="footer__top__nav">
                         <h3><a href="{{ route('contact') }}">Контакты</a></h3>
-                        <p>г. Киев, ул. Богдана Хмельницкого 3А, оф.203</p>
-                        <p><a href="mailto:book@travelbridge.com.ua">book@travelbridge.com.ua</a></p>
-                        <p>+38 (066) 367 93 18</p>
                         <ul>
-                            <li class="facebook">
-                                <a title="Facebook" href="https://www.facebook.com/travelbridge.ua" target="_blank">
-                                    <i class="la la-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="instagram">
-                                <a title="Instagram" href="https://www.instagram.com/travelbridge.ua" target="_blank">
-                                    <i class="la la-instagram"></i>
-                                </a>
-                            </li>
-                            <li class="twitter">
-                                <a title="Twitter" href="https://t.me/travelbridge" target="_blank">
-                                    <i class="la la-telegram"></i>
-                                </a>
-                            </li>
+                            <li>Курс валют</li>
+                            @foreach(\App\Models\ExchangeRate::query()->limit(3)->get() as $exchangeRate)
+                                <li>{{ $exchangeRate->pair }} {{ $exchangeRate->rate }}</li>
+                            @endforeach
                         </ul>
                     </aside>
                 </div>

@@ -60,6 +60,15 @@ class Tour extends Model
     }
 
     /**
+     * @param Builder $query
+     * @return Builder
+     */
+    public function scopePublic(Builder $query): Builder
+    {
+        return $query->where('type', self::PUBLIC_TYPE);
+    }
+
+    /**
      * @return string
      */
     public function getSmallImageLinkAttribute(): string
