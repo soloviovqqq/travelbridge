@@ -43,4 +43,13 @@ class SendContactMessageRequest extends FormRequest
             'message' => $this->input('message'),
         ];
     }
+
+    /**
+     * @return string
+     */
+    protected function getRedirectUrl(): string
+    {
+        $url = $this->redirector->getUrlGenerator();
+        return $url->previous()  . '#contact-form';
+    }
 }

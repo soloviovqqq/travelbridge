@@ -140,6 +140,88 @@
             </div>
         </div>
 
+        <div class="frequently-asked" id="contact-form">
+            <div class="container">
+                <h2 class="title title-border-bottom align-center offset-item animate">Наши контакты</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contact-text">
+                            <div class="contact-box">
+                                <p class="mb-2">г. Киев, ул. Богдана Хмельницкого 3А</p>
+                                <p class="mb-2">+38 (066) 367 93 18</p>
+                                <p class="mb-2">+38 (050) 959 89 88</p>
+                                <p class="mb-2">book@travelbridge.com.ua</p>
+                                <p>travelbridge@ukr.net</p>
+                            </div>
+                            <div class="footer__top__nav footer__top__nav--contact">
+                                <ul>
+                                    <li class="facebook">
+                                        <a title="Facebook" href="https://www.facebook.com/travelbridge.ua" target="_blank">
+                                            <i class="la la-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a title="Instagram" href="https://www.instagram.com/travelbridge.ua" target="_blank">
+                                            <i class="la la-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li class="twitter">
+                                        <a title="Twitter" href="https://t.me/travelbridge" target="_blank">
+                                            <i class="la la-telegram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="contact-form">
+                            <form action="{{ route('contact.send-message') }}" method="post" class="form-underline">
+                                @csrf
+                                <div class="field-input is-invalid">
+                                    <input type="text" name="name" value="{{ old('name') }}" placeholder="Ваше имя"
+                                           class="form-control @error('name') is-invalid @enderror">
+                                    @error('name')
+                                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                    @enderror
+                                </div>
+                                <div class="field-input">
+                                    <input type="email" name="email" value="{{ old('email') }}" placeholder="Ваш email"
+                                           class="form-control @error('email') is-invalid @enderror">
+                                    @error('email')
+                                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                    @enderror
+                                </div>
+                                <div class="field-input">
+                                    <input type="text" name="phone" value="{{ old('phone') }}" placeholder="Ваш номер телефона"
+                                           class="form-control @error('phone') is-invalid @enderror">
+                                    @error('phone')
+                                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                    @enderror
+                                </div>
+                                <div class="field-textarea">
+                                    <textarea name="message" class="form-control @error('message') is-invalid @enderror" placeholder="Ваше сообщение">{{ old('message') }}</textarea>
+                                    @error('message')
+                                    <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
+                                    @enderror
+                                </div>
+                                <div class="field-submit mb-4">
+                                    <input type="submit" value="Отправить сообщение" class="btn">
+                                </div>
+                                @if(Session::has('message'))
+                                    <div class="alert alert-info" role="alert">
+                                        {{ Session::get('message') }}
+                                    </div>
+                                @endif
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         {{--<div class="blogs">
             <div class="container">
                 <h2 class="title title-border-bottom align-center offset-item">Наш блог</h2>

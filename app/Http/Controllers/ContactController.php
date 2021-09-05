@@ -34,7 +34,7 @@ class ContactController extends Controller
         $message = ContactMessage::query()->create($request->getData());
         $this->sendMessageToTelegram($message);
         Session::flash('message', 'Ваше сообщение успешно отправлено. Мы ответим Вам как можно быстрее.');
-        return redirect(route('contact'));
+        return redirect()->to(app('url')->previous(). '#contact-form');
     }
 
     /**
