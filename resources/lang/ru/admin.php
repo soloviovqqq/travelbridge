@@ -143,6 +143,7 @@ return [
     'info_kids' => 'Информация о детях',
     'info_price' => 'Стоимость',
     'additional_info' => 'Дополнительная информация',
+    'price_from' => 'Цена от',
 
     'countries' => 'Страны',
     'country' => 'Страна',

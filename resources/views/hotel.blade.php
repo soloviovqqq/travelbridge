@@ -59,7 +59,7 @@
                                         </span>
                                     </div>
                                     <div class="place__currency">
-                                        @for($i = 0; $i < $hotel->symbol_price; $i++)$@endfor
+                                        от {{ $hotel->price_from }}$
                                     </div>
                                     <div class="place__category">
                                         <a>{{ $hotel->place }}</a>

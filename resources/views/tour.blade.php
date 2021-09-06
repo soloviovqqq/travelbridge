@@ -51,7 +51,9 @@
                             <div class="place__box--npd">
                                 <h1>{{ $tour->title }}</h1>
                                 <div class="place__meta">
-                                    <div class="place__currency">@for($i = 0; $i < $tour->symbol_price; $i++)$@endfor</div>
+                                    <div class="place__currency">
+                                        от {{ $tour->price_from }}$
+                                    </div>
                                     <div class="place__category">
                                         <a>{{ $tour->tourType->title }}</a>
                                     </div>

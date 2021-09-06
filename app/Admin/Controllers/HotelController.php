@@ -58,7 +58,7 @@ class HotelController extends AdminController
             $form->hidden('alias')->required();
             $form->text('place', __('admin.place'))->required();
             $form->number('rating', __('admin.rating'))->default(5)->min(1)->max(5);
-            $form->number('symbol_price', __('admin.symbol_price'))->default(2)->min(1)->max(4);
+            $form->number('price_from', __('admin.price_from'))->required();
             $form->ckeditor('description', __('admin.description'))->required();
             $form->url('video_link', __('admin.video_link'));
             $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 540, 'height' => 500]))->uniqueName()->required();

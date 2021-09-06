@@ -26,7 +26,7 @@
                 </div>
                 <div class="place-price">
                     <span>
-                        @for($i = 0; $i < $tour->symbol_price; $i++)$@endfor
+                        от {{ $tour->price_from }}$
                     </span>
                 </div>
             </div>

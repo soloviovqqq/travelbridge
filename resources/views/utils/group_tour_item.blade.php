@@ -9,7 +9,7 @@
         <div class="entry-detail">
             <div class="entry-head">
                 <div class="place-type list-item">
-                    <span> @for($i = 0; $i < $groupTour->symbol_price; $i++)$@endfor</span>
+                    <span>от {{ $groupTour->price_from }}$</span>
                 </div>
                 <div class="place-city">
                     {{ $groupTour->place }}
