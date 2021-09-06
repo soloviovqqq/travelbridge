@@ -99,11 +99,9 @@
                                 </div>
                             </div>
                             <div class="place__box place__box-overview">
-                                <h3>Описание</h3>
-                                <div class="place__desc">
+                                <div class="place__desc open">
                                     {!! $hotel->description !!}
                                 </div>
-                                <a href="#" class="show-more">Подробнее...</a>
                             </div>
 
                             @if($hotel->faq)

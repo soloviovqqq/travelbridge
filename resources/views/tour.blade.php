@@ -72,7 +72,7 @@
 
                             @if($tour->schedule)
                             <div class="place__box place__box-open">
-                                <h3 class="place__title--additional">Расписание тура:</h3>
+                                <h3 class="place__title--additional">Расписание тура</h3>
                                 <table class="open-table">
                                     <tbody>
                                     @foreach($tour->schedule as $schedule)
