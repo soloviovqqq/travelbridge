@@ -53,20 +53,30 @@ class GroupTourController extends AdminController
     protected function form()
     {
         $form = new Form(new GroupTour());
-        $form->multipleSelect('tours', __('admin.tours'))->options($this->getTours())->required();
-        $form->text('title', __('admin.title'))->required();
-        $form->hidden('alias')->required();
-        $form->text('place', __('admin.place'))->required();
-        $form->number('symbol_price', __('admin.symbol_price'))->default(2)->min(1)->max(4);
-        $form->ckeditor('description', __('admin.description'))->required();
-        $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 540, 'height' => 360]))->uniqueName()->required();
-        $form->image('big_image', __('admin.big_image'))->help(__('admin.image_help', ['width' => 1920, 'height' => 450]))->uniqueName()->required();
-        $form->table('faq', __('admin.faqs'), function ($table) {
-            $table->text('question', __('admin.question'))->required();
-            $table->textarea('answer', __('admin.answer'))->required();
+
+        $form->tab( __('admin.main_info'), function (Form $form) {
+            $form->multipleSelect('tours', __('admin.tours'))->options($this->getTours())->required();
+            $form->text('title', __('admin.title'))->required();
+            $form->hidden('alias')->required();
+            $form->text('place', __('admin.place'))->required();
+            $form->number('symbol_price', __('admin.symbol_price'))->default(2)->min(1)->max(4);
+            $form->ckeditor('description', __('admin.description'))->required();
+            $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 540, 'height' => 360]))->uniqueName()->required();
+            $form->image('big_image', __('admin.big_image'))->help(__('admin.image_help', ['width' => 1920, 'height' => 450]))->uniqueName()->required();
+            $form->switch('visible', __('admin.show'))->default(1);
+            $form->number('order', __('admin.order'))->default(0);
+        })->tab(__('admin.files'), function (Form $form) {
+            $form->table('files', __('admin.files'), function ($table) {
+                $table->text('title', __('admin.title'))->required();
+                $table->url('file', __('admin.file_url'))->required();
+            });
+        })->tab(__('admin.faqs'), function (Form $form) {
+            $form->table('faq', __('admin.faqs'), function ($table) {
+                $table->text('question', __('admin.question'))->required();
+                $table->textarea('answer', __('admin.answer'))->required();
+            });
         });
-        $form->switch('visible', __('admin.show'))->default(1);
-        $form->number('order', __('admin.order'))->default(0);
+
         $form->disableReset();
         $form->disableViewCheck();
         $form->disableCreatingCheck();

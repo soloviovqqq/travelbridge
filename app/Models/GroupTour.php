@@ -23,6 +23,7 @@ class GroupTour extends Model
      */
     protected $casts = [
         'faq' => 'json',
+        'files' => 'json',
     ];
 
     /**
@@ -92,5 +93,23 @@ class GroupTour extends Model
     public function tours(): BelongsToMany
     {
         return $this->belongsToMany(Tour::class, 'group_tour_tour');
+    }
+
+
+    /**
+     * @param $value
+     * @return array
+     */
+    public function getFilesAttribute($value): array
+    {
+        return array_values(json_decode($value, true) ?: []);
+    }
+
+    /**
+     * @param $value
+     */
+    public function setFilesAttribute($value): void
+    {
+        $this->attributes['files'] = json_encode(array_values($value));
     }
 }

@@ -29,6 +29,7 @@ class Tour extends Model
         'schedule' =>'json',
         'program' =>'json',
         'faq' =>'json',
+        'files' =>'json',
     ];
 
     /**
@@ -150,5 +151,22 @@ class Tour extends Model
     public function setFaqAttribute($value): void
     {
         $this->attributes['faq'] = json_encode(array_values($value));
+    }
+
+    /**
+     * @param $value
+     * @return array
+     */
+    public function getFilesAttribute($value): array
+    {
+        return array_values(json_decode($value, true) ?: []);
+    }
+
+    /**
+     * @param $value
+     */
+    public function setFilesAttribute($value): void
+    {
+        $this->attributes['files'] = json_encode(array_values($value));
     }
 }

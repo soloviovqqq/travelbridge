@@ -80,7 +80,7 @@ class TourController extends AdminController
                 $table->textarea('text', __('admin.texts'));
             });
         })->tab(__('admin.images'), function (Form $form) {
-            $form->multipleImage('images', __('admin.images'))->help(__('admin.image_help', ['width' => 1440, 'height' => 400]))->uniqueName()->removable();
+            $form->multipleImage('images', __('admin.images'))->help(__('admin.image_help', ['width' => 1440, 'height' => 400]))->uniqueName()->sortable()->removable();
         })->tab(__('admin.schedule'), function (Form $form) {
             $form->table('schedule', __('admin.schedule'), function ($table) {
                 $table->text('title', __('admin.title'));
@@ -91,6 +91,11 @@ class TourController extends AdminController
             $form->table('program', __('admin.program'), function ($table) {
                 $table->text('title', __('admin.title'))->required();
                 $table->textarea('description', __('admin.description'))->required();
+            });
+        })->tab(__('admin.files'), function (Form $form) {
+            $form->table('files', __('admin.files'), function ($table) {
+                $table->text('title', __('admin.title'))->required();
+                $table->url('file', __('admin.file_url'))->required();
             });
         })->tab(__('admin.faqs'), function (Form $form) {
             $form->table('faq', __('admin.faqs'), function ($table) {

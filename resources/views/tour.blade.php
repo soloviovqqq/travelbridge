@@ -114,6 +114,18 @@
                                     </ul>
                                 </div>
                             @endif
+
+                            @if($tour->files)
+                                <div class="place__box">
+                                    <h3>Дополнительные материалы</h3>
+                                    @foreach($tour->files as $file)
+                                        <p class="mb-2">
+                                            {{ $file['title'] }}
+                                            <a href="{{ $file['file'] }}" download=""><i class="fas fa-download"></i></a>
+                                        </p>
+                                    @endforeach
+                                </div>
+                            @endif
                         </div>
                     </div>
 
