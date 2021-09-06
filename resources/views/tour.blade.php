@@ -65,10 +65,9 @@
                             </div>
 
                             <div class="place__box-overview">
-                                <div class="place__desc">
+                                <div class="place__desc open">
                                     <a>{!! $tour->description  !!}</a>
                                 </div>
-                                <a href="#" class="show-more">Подробнее...</a>
                             </div>
 
                             @if($tour->schedule)
@@ -90,7 +89,7 @@
 
                             @if($tour->program)
                                 <div class="place__box">
-                                    <h3>Программа тура</h3>
+                                    <h3>Описание</h3>
                                     <ul class="faqs-accordion">
                                         @foreach($tour->program as $program)
                                             <li>
