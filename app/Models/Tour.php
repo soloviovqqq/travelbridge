@@ -26,6 +26,7 @@ class Tour extends Model
      */
     protected $casts = [
         'images' =>'json',
+        'description_images' =>'json',
         'schedule' =>'json',
         'program' =>'json',
         'faq' =>'json',

@@ -40,6 +40,7 @@ return [
     'action' => 'Опции',
     'title' => 'Название',
     'description' => 'Описание',
+    'description_images' => 'Картинки к описанию',
     'back' => 'Назад',
     'back_to_list' => 'Вернуться к списку',
     'submit' => 'Отправить',

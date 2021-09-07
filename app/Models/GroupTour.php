@@ -24,6 +24,7 @@ class GroupTour extends Model
     protected $casts = [
         'faq' => 'json',
         'files' => 'json',
+        'description_images' =>'json',
     ];
 
     /**

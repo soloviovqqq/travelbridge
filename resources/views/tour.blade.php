@@ -68,7 +68,16 @@
 
                             <div class="place__box-overview">
                                 <div class="place__desc open">
-                                    <a>{!! $tour->description  !!}</a>
+                                    {!! $tour->description  !!}
+                                    <div class="row text-center text-lg-start">
+                                        @foreach($tour->description_images as $descriptionImages)
+                                            <div class="col-lg-3 col-md-4 col-6">
+                                                <a href="{{ \Illuminate\Support\Facades\Storage::url($descriptionImages) }}" class="d-block mb-4 h-100 venobox" data-gall="description_images">
+                                                    <img class="img-fluid img-thumbnail" src="{{ \Illuminate\Support\Facades\Storage::url($descriptionImages) }}" alt="">
+                                                </a>
+                                            </div>
+                                        @endforeach
+                                    </div>
                                 </div>
                             </div>
 

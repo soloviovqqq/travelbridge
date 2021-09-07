@@ -62,6 +62,7 @@ class TourController extends AdminController
             $form->text('dates', __('admin.dates'))->required();
             $form->textarea('small_description', __('admin.small_description'))->required();
             $form->ckeditor('description', __('admin.description'))->required();
+            $form->multipleImage('description_images', __('admin.description_images'))->uniqueName()->removable();
             $form->url('video_link', __('admin.video_link'));
             $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 500, 'height' => 420]))->uniqueName()->required();
             $form->switch('hot', __('admin.hot'))->default(0);
