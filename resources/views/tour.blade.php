@@ -70,13 +70,15 @@
                                 <div class="place__desc open">
                                     {!! $tour->description  !!}
                                     <div class="row text-center text-lg-start">
-                                        @foreach($tour->description_images as $descriptionImages)
-                                            <div class="col-lg-3 col-md-4 col-6">
-                                                <a href="{{ \Illuminate\Support\Facades\Storage::url($descriptionImages) }}" class="d-block mb-4 h-100 venobox" data-gall="description_images">
-                                                    <img class="img-fluid img-thumbnail" src="{{ \Illuminate\Support\Facades\Storage::url($descriptionImages) }}" alt="">
-                                                </a>
-                                            </div>
-                                        @endforeach
+                                        @if($tour->description_images)
+                                            @foreach($tour->description_images as $descriptionImages)
+                                                <div class="col-lg-3 col-md-4 col-6">
+                                                    <a href="{{ \Illuminate\Support\Facades\Storage::url($descriptionImages) }}" class="d-block mb-4 h-100 venobox" data-gall="description_images">
+                                                        <img class="img-fluid img-thumbnail" src="{{ \Illuminate\Support\Facades\Storage::url($descriptionImages) }}" alt="">
+                                                    </a>
+                                                </div>
+                                            @endforeach
+                                        @endif
                                     </div>
                                 </div>
                             </div>
