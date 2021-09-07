@@ -29,6 +29,7 @@ class FilesController extends AdminController
     protected function grid()
     {
         $grid = new Grid(new File());
+        $grid->column('title', __('admin.title'));
         $grid->column('file', __('admin.file'))->display(function () {
             return $this->file_link;
         });
@@ -50,6 +51,7 @@ class FilesController extends AdminController
     protected function form()
     {
         $form = new Form(new File());
+        $form->text('title',  __('admin.title'))->required();
         $form->file('file', __('admin.file'))->uniqueName()->required();
         $form->disableReset();
         $form->disableViewCheck();
