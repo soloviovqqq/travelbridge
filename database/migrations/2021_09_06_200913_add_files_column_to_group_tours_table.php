@@ -15,7 +15,7 @@ class AddFilesColumnToGroupToursTable extends Migration
     public function up(): void
     {
         Schema::table('group_tours', function (Blueprint $table) {
-            $table->json('files')->after('faq');
+            $table->json('files')->after('faq')->nullable();
         });
     }
 
