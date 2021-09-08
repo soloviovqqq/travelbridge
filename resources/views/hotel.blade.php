@@ -164,13 +164,11 @@
                                         </li>
                                         @endif
                                     </ul>
-                                    <div class="mt-4">
-                                        <p>Свяжитесь с нами:</p>
-                                        <div class="button-wrap mt-2">
-                                            <div class="button"><a href="#" class="btn">Позвонить</a></div>
-                                            <div class="button"><a href="https://t.me/travelbridge" class="btn btn-border" target="_blank">Написать</a></div>
+                                        <div class="mt-4">
+                                            <p>Свяжитесь с нами:</p>
+                                            <div class="mt-2"><a href="https://t.me/travelbridge" class="btn d-block" target="_blank">Позвонить</a></div>
+                                            <div class="mt-2"><a href="https://t.me/travelbridge" class="btn d-block" target="_blank">Написать</a></div>
                                         </div>
-                                    </div>
                                 </div>
                             </aside>
                         </div>

@@ -29,17 +29,17 @@
                             <div class="place__box place__box-overview">
                                 <div class="place__desc open">
                                     {!! $groupTour->description !!}
-                                    <div class="row text-center text-lg-start">
-                                        @if($groupTour->description_images)
-                                            @foreach($groupTour->description_images as $descriptionImages)
-                                                <div class="col-lg-2 col-md-4 col-6">
+                                    @if($groupTour->description_images)
+                                        <div class="row text-center text-lg-start">
+                                        @foreach($groupTour->description_images as $descriptionImages)
+                                                <div class="col-6">
                                                     <a href="{{ \Illuminate\Support\Facades\Storage::url($descriptionImages) }}" class="d-block mb-4 h-100 venobox" data-gall="description_images">
                                                         <img class="img-fluid img-thumbnail" src="{{ \Illuminate\Support\Facades\Storage::url($descriptionImages) }}" alt="">
                                                     </a>
                                                 </div>
                                             @endforeach
-                                        @endif
-                                    </div>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
 
@@ -63,7 +63,7 @@
                                     @foreach($groupTour->files as $file)
                                         <p class="mb-2">
                                             {{ $file['title'] }}
-                                            <a href="{{ $file['file'] }}" download=""><i class="fas fa-download"></i></a>
+                                            <a href="{{ $file['file'] }}" download=""><i class="fas fa-download" style="font-size: 20px;"></i></a>
                                         </p>
                                     @endforeach
                                 </div>

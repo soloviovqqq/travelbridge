@@ -69,17 +69,17 @@
                             <div class="place__box-overview">
                                 <div class="place__desc open">
                                     {!! $tour->description  !!}
-                                    <div class="row text-center text-lg-start">
-                                        @if($tour->description_images)
-                                            @foreach($tour->description_images as $descriptionImages)
-                                                <div class="col-lg-3 col-md-4 col-6">
+                                    @if($tour->description_images)
+                                        <div class="row text-center text-lg-start mt-2">
+                                        @foreach($tour->description_images as $descriptionImages)
+                                                <div class="col-6">
                                                     <a href="{{ \Illuminate\Support\Facades\Storage::url($descriptionImages) }}" class="d-block mb-4 h-100 venobox" data-gall="description_images">
                                                         <img class="img-fluid img-thumbnail" src="{{ \Illuminate\Support\Facades\Storage::url($descriptionImages) }}" alt="">
                                                     </a>
                                                 </div>
                                             @endforeach
-                                        @endif
-                                    </div>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
 
@@ -134,7 +134,7 @@
                                     @foreach($tour->files as $file)
                                         <p class="mb-2">
                                             {{ $file['title'] }}
-                                            <a href="{{ $file['file'] }}" download=""><i class="fas fa-download"></i></a>
+                                            <a href="{{ $file['file'] }}" download=""><i class="fas fa-download" style="font-size: 20px;"></i></a>
                                         </p>
                                     @endforeach
                                 </div>
@@ -195,10 +195,8 @@
                                     </ul>
                                     <div class="mt-4">
                                         <p>Свяжитесь с нами:</p>
-                                        <div class="button-wrap mt-2">
-                                            <div class="button"><a href="#" class="btn">Позвонить</a></div>
-                                            <div class="button"><a href="https://t.me/travelbridge" class="btn btn-border" target="_blank">Написать</a></div>
-                                        </div>
+                                            <div class="mt-2"><a href="https://t.me/travelbridge" class="btn d-block" target="_blank">Позвонить</a></div>
+                                            <div class="mt-2"><a href="https://t.me/travelbridge" class="btn d-block" target="_blank">Написать</a></div>
                                     </div>
                                 </div>
                             </aside>
