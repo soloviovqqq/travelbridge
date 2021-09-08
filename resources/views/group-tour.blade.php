@@ -32,7 +32,7 @@
                                     @if($groupTour->description_images)
                                         <div class="row text-center text-lg-start">
                                         @foreach($groupTour->description_images as $descriptionImages)
-                                                <div class="col-6">
+                                                <div class="col-12">
                                                     <a href="{{ \Illuminate\Support\Facades\Storage::url($descriptionImages) }}" class="d-block mb-4 h-100 venobox" data-gall="description_images">
                                                         <img class="img-fluid img-thumbnail" src="{{ \Illuminate\Support\Facades\Storage::url($descriptionImages) }}" alt="">
                                                     </a>
@@ -62,8 +62,7 @@
                                     <h3>Дополнительные материалы</h3>
                                     @foreach($groupTour->files as $file)
                                         <p class="mb-2">
-                                            {{ $file['title'] }}
-                                            <a href="{{ $file['file'] }}" download=""><i class="fas fa-download" style="font-size: 20px;"></i></a>
+                                            <a href="{{ $file['file'] }}" download="">{{ $file['title'] }}<i class="fas fa-download" style="font-size: 20px;"></i></a>
                                         </p>
                                     @endforeach
                                 </div>
