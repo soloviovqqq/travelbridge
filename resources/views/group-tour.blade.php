@@ -19,7 +19,7 @@
                                 <h1 class="position-relative">{{ $groupTour->title }}</h1>
                                 <div class="place__meta">
                                     <div class="place__currency">
-                                        от {{ $groupTour->price_from }}$
+                                        от {{ $groupTour->price_from }}
                                     </div>
                                     <div class="place__category">
                                         <a>{{ $groupTour->place }}</a>

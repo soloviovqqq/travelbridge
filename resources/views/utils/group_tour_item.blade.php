@@ -9,7 +9,7 @@
         <div class="entry-detail">
             <div class="entry-head">
                 <div class="place-type list-item">
-                    <span>от {{ $groupTour->price_from }}$</span>
+                    <span>от {{ $groupTour->price_from }}</span>
                 </div>
                 <div class="place-city">
                     {{ $groupTour->place }}

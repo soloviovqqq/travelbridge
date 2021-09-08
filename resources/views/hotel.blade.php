@@ -59,7 +59,7 @@
                                         </span>
                                     </div>
                                     <div class="place__currency">
-                                        от {{ $hotel->price_from }}$
+                                        от {{ $hotel->price_from }}
                                     </div>
                                     <div class="place__category">
                                         <a>{{ $hotel->place }}</a>

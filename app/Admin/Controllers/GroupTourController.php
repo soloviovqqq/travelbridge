@@ -59,7 +59,7 @@ class GroupTourController extends AdminController
             $form->text('title', __('admin.title'))->required();
             $form->hidden('alias')->required();
             $form->text('place', __('admin.place'))->required();
-            $form->number('price_from', __('admin.price_from'))->required();
+            $form->text('price_from', __('admin.price_from'))->required();
             $form->ckeditor('description', __('admin.description'))->required();
             $form->multipleImage('description_images', __('admin.description_images'))->help(__('admin.image_help', ['width' => 1100, 'height' => 700]))->uniqueName()->removable();
             $form->image('small_image', __('admin.small_image'))->help(__('admin.image_help', ['width' => 540, 'height' => 360]))->uniqueName()->required();

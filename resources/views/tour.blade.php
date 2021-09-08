@@ -52,7 +52,7 @@
                                 <h1>{{ $tour->title }}</h1>
                                 <div class="place__meta">
                                     <div class="place__currency">
-                                        от {{ $tour->price_from }}$
+                                        от {{ $tour->price_from }}
                                     </div>
                                     <div class="place__category">
                                         <a>{{ $tour->tourType->title }}</a>

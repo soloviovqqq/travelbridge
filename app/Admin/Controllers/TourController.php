@@ -58,7 +58,7 @@ class TourController extends AdminController
             $form->text('title',  __('admin.title'))->required();
             $form->hidden('alias')->required();
             $form->text('place', __('admin.place'))->required();
-            $form->number('price_from', __('admin.price_from'))->required();
+            $form->text('price_from', __('admin.price_from'))->required();
             $form->text('dates', __('admin.dates'))->required();
             $form->textarea('small_description', __('admin.small_description'))->required();
             $form->ckeditor('description', __('admin.description'))->required();

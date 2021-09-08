@@ -26,7 +26,7 @@
                 </div>
                 <div class="place-price">
                     <span>
-                        от {{ $tour->price_from }}$
+                        от {{ $tour->price_from }}
                     </span>
                 </div>
             </div>
