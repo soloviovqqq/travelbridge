@@ -133,7 +133,7 @@
                                     <h3>Дополнительные материалы</h3>
                                     @foreach($tour->files as $file)
                                         <p class="mb-2">
-                                            <a href="{{ $file['file'] }}" download="">{{ $file['title'] }}<i class="fas fa-download" style="font-size: 20px;"></i></a>
+                                            <a href="{{ $file['file'] }}" download="">{{ $file['title'] }} <i class="fas fa-download" style="font-size: 20px;"></i></a>
                                         </p>
                                     @endforeach
                                 </div>
