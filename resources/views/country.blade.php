@@ -52,9 +52,11 @@
         <div class="city-content mt-5">
             <div class="city-content__panels">
                 <div class="container">
-                    <div class="area-places layout-4col">
+                    <div class="row">
                         @foreach($hotels as $hotel)
-                            @include('utils.hotel_item', $hotel)
+                            <div class="col-lg-3 col-md-6">
+                                @include('utils.hotel_item', $hotel)
+                            </div>
                         @endforeach
                     </div>
                     {{ $hotels->links("pagination::bootstrap-4") }}
