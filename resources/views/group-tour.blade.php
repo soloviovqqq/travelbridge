@@ -78,7 +78,7 @@
                 <div class="similar-places__content">
                     <div class="row">
                         @foreach($tours as $tour)
-                            <div class="col-lg-3 col-md-6">
+                            <div class="col-lg-3 col-md-6 mb-4">
                                 @include('utils.tour_item', $tour)
                             </div>
                         @endforeach
