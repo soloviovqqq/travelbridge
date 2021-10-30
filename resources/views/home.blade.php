@@ -41,7 +41,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -146,15 +145,34 @@
                     <h2>Фотогалерея</h2>
                 </div>
 
-                <div class="row text-center text-lg-start">
-                    @foreach($gallery as $image)
-                        <div class="col-lg-3 col-md-4 col-6">
+{{--                <div class="row text-center text-lg-start">--}}
+{{--                    @foreach($gallery as $image)--}}
+{{--                        <div class="col-lg-3 col-md-4 col-6">--}}
+{{--                            <a href="{{ \Illuminate\Support\Facades\Storage::url($image) }}" class="d-block mb-4 h-100 venobox" data-gall="pls_slider">--}}
+{{--                                <img class="img-fluid img-thumbnail" src="{{ \Illuminate\Support\Facades\Storage::url($image) }}" alt="">--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                    @endforeach--}}
+{{--                </div>--}}
+
+                <div class="slick-sliders offset-item">
+                    <div class="slick-slider explore-slider slider-pd30" data-item="4" data-arrows="true" data-itemScroll="1" data-dots="false" data-centerPadding="30" data-tabletitem="2" data-mobileitem="1" data-mobilearrows="false">
+                        @foreach($gallery as $image)
                             <a href="{{ \Illuminate\Support\Facades\Storage::url($image) }}" class="d-block mb-4 h-100 venobox" data-gall="pls_slider">
-                                <img class="img-fluid img-thumbnail" src="{{ \Illuminate\Support\Facades\Storage::url($image) }}" alt="">
+                                <img class="img-fluid img-thumbnail" src="{{ \Illuminate\Support\Facades\Storage::url($image) }}" alt="" style="height: 160px;">
                             </a>
+                        @endforeach
+                    </div>
+                    <div class="place-slider__nav slick-nav">
+                        <div class="place-slider__prev slick-nav__prev" style="top: 35%;">
+                            <i class="las la-angle-left"></i>
                         </div>
-                    @endforeach
+                        <div class="place-slider__next slick-nav__next" style="top: 35%;">
+                            <i class="las la-angle-right"></i>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
 
