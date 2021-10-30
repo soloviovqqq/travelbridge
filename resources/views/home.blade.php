@@ -120,7 +120,7 @@
                                     <img src="{{ asset('theme/images/assets/quote-active.png') }}" alt="Quote" class="quote">
                                 </div>
                                 <div class="testimonial-info">
-                                    <p>{!! $review->text !!}</p>
+                                    <p style="max-height: 270px;">{!! $review->text !!}</p>
                                     <div class="testimonial-meta">
                                         <b>{{ $review->name }}</b>
                                     </div>
@@ -165,11 +165,12 @@
                     <div class="col-md-6">
                         <div class="contact-text">
                             <div class="contact-box">
-                                <p class="mb-2">г. Киев, ул. Богдана Хмельницкого 3А</p>
-                                <p class="mb-2">+38 (066) 367 93 18</p>
-                                <p class="mb-2">+38 (050) 959 89 88</p>
+                                <p class="mb-2">Украина, г. Киев, 04119, ул. Дегтяревская 11, оф 3</p>
                                 <p class="mb-2">book@travelbridge.com.ua</p>
-                                <p>travelbridge@ukr.net</p>
+                                <p class="mb-2">travelbridge@ukr.net</p>
+                                <p class="mb-2">Звонок/ Viber/ WhatsApp/Telegram</p>
+                                <p class="mb-2">+38 (066) 367 93 18</p>
+                                <p>+38 (095) 128 70 77</p>
                             </div>
                             <div class="footer__top__nav footer__top__nav--contact">
                                 <ul>

@@ -17,11 +17,12 @@
                         <div class="contact-text">
                             <div class="contact-box">
                                 <h3>Наши контакты</h3>
-                                <p>г. Киев, ул. Богдана Хмельницкого 3А</p>
-                                <p>+38 (066) 367 93 18</p>
-                                <p>+38 (050) 959 89 88</p>
+                                <p>Украина, г. Киев, 04119, ул. Дегтяревская 11, оф 3</p>
                                 <p>book@travelbridge.com.ua</p>
                                 <p>travelbridge@ukr.net</p>
+                                <p>Звонок/ Viber/ WhatsApp/Telegram</p>
+                                <p>+38 (066) 367 93 18</p>
+                                <p>+38 (095) 128 70 77</p>
                             </div>
                             <div class="footer__top__nav footer__top__nav--contact">
                             <ul>
