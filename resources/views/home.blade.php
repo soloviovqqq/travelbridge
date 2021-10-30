@@ -120,7 +120,7 @@
                                     <img src="{{ asset('theme/images/assets/quote-active.png') }}" alt="Quote" class="quote">
                                 </div>
                                 <div class="testimonial-info">
-                                    <p style="max-height: 270px;">{!! $review->text !!}</p>
+                                    <p style="min-height: 270px;">{!! $review->text !!}</p>
                                     <div class="testimonial-meta">
                                         <b>{{ $review->name }}</b>
                                     </div>
