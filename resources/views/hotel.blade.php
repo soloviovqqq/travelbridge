@@ -185,7 +185,7 @@
                         <div class="row">
                             @foreach($hotels as $hotel)
                                 <div class="col-lg-3 col-md-6">
-                                    @include('utils.hotel_item'. $hotels)
+                                    @include('utils.hotel_item'. $hotel)
                                 </div>
                             @endforeach
                         </div>
