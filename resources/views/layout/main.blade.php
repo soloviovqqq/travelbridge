@@ -2,12 +2,14 @@
 <html lang="en">
     @include('layout.head')
 <body>
-<div id="wrapper">
-    @include('layout.header', ['transparentHeader' => $transparentHeader ?? false])
+    <div id="wrapper">
+        @include('layout.header', ['transparentHeader' => $transparentHeader ?? false])
 
-    @yield('content')
+        @yield('content')
 
-    @include('layout.footer')
-</div>
+        @include('layout.footer')
+
+    </div>
+    @include('utils.modal')
 </body>
 </html>

@@ -13,6 +13,14 @@ class MainInfo extends Model
     /**
      * @var array
      */
+    protected $fillable = [
+        'agency_text',
+        'gallery'
+    ];
+
+    /**
+     * @var array
+     */
     protected $casts = [
         'gallery' => 'json',
     ];
