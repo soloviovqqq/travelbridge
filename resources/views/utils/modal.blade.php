@@ -1,6 +1,10 @@
 <div class="modal">
     <div class="modal__content">
-        <h1>🇺🇦 ВАЖЛИВО 🇺🇦</h1>
+        <h1 class="d-flex justify-content-center align-items-center gap-3" >
+            <img src="https://em-content.zobj.net/thumbs/240/google/350/flag-ukraine_1f1fa-1f1e6.png" alt="" style="width: 25px; height: 25px;">
+            ВАЖЛИВО
+            <img src="https://em-content.zobj.net/thumbs/240/google/350/flag-ukraine_1f1fa-1f1e6.png" alt="" style="width: 25px; height: 25px;">
+        </h1>
         <h2>Приносимо свої вибачення, ведеться робота по перекладанню сайта українською мовою!</h2>
         <a onclick="hideModal()" class="modal__close">&times;</a>
 
